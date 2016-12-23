@@ -1,0 +1,1 @@
+<?php die(); ?>          0a:1:{s:11:"controllers";s:18:"system.controllers";}
