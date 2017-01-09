@@ -11,7 +11,7 @@ namespace XLite\Module\XC\CanadaPost\Controller\Admin;
 /**
  * Main page controller
  */
- class Main extends \XLite\Controller\Admin\MainAbstract implements \XLite\Base\IDecorator
+ class Main extends \XLite\Module\XC\MultiVendor\Controller\Admin\Main implements \XLite\Base\IDecorator
 {
     /**
      * ACTION: default action

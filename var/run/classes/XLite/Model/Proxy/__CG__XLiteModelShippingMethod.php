@@ -94,10 +94,10 @@ class Method extends \XLite\Model\Shipping\Method implements \Doctrine\ORM\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', 'onDemand', 'free', 'method_id', 'processor', 'carrier', 'code', 'enabled', 'position', 'shipping_markups', 'taxClass', 'added', 'moduleName', 'fromMarketplace', 'iconURL', 'tableType', 'handlingFee', 'handlingFeeType', 'editLanguage', 'translations', '_previous_state');
+            return array('__isInitialized__', 'onDemand', 'free', 'vendor', 'method_id', 'processor', 'carrier', 'code', 'enabled', 'position', 'shipping_markups', 'taxClass', 'added', 'moduleName', 'fromMarketplace', 'iconURL', 'tableType', 'handlingFee', 'handlingFeeType', 'editLanguage', 'translations', '_previous_state');
         }
 
-        return array('__isInitialized__', 'onDemand', 'free', 'method_id', 'processor', 'carrier', 'code', 'enabled', 'position', 'shipping_markups', 'taxClass', 'added', 'moduleName', 'fromMarketplace', 'iconURL', 'tableType', 'handlingFee', 'handlingFeeType', 'editLanguage', 'translations', '_previous_state');
+        return array('__isInitialized__', 'onDemand', 'free', 'vendor', 'method_id', 'processor', 'carrier', 'code', 'enabled', 'position', 'shipping_markups', 'taxClass', 'added', 'moduleName', 'fromMarketplace', 'iconURL', 'tableType', 'handlingFee', 'handlingFeeType', 'editLanguage', 'translations', '_previous_state');
     }
 
     /**
@@ -261,6 +261,50 @@ class Method extends \XLite\Model\Shipping\Method implements \Doctrine\ORM\Proxy
     /**
      * {@inheritDoc}
      */
+    public function isOfCurrentVendor()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isOfCurrentVendor', array());
+
+        return parent::isOfCurrentVendor();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setVendor($vendor)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVendor', array($vendor));
+
+        return parent::setVendor($vendor);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getChildrenMethods()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getChildrenMethods', array());
+
+        return parent::getChildrenMethods();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getVendor()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVendor', array());
+
+        return parent::getVendor();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function getProcessorObject()
     {
 
@@ -377,17 +421,6 @@ class Method extends \XLite\Model\Shipping\Method implements \Doctrine\ORM\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getParentMethod', array());
 
         return parent::getParentMethod();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getChildrenMethods()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getChildrenMethods', array());
-
-        return parent::getChildrenMethods();
     }
 
     /**

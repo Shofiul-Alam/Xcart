@@ -14,7 +14,7 @@ namespace XLite\Module\XC\FreeShipping\Model;
  *
  * @Decorator\Depend("CDev\Coupons")
  */
- class Coupon extends \XLite\Module\CDev\Coupons\Model\CouponAbstract implements \XLite\Base\IDecorator
+ class Coupon extends \XLite\Module\XC\MultiVendor\Module\CDev\Coupons\Model\Coupon implements \XLite\Base\IDecorator
 {
     const TYPE_FREESHIP = 'S';
 

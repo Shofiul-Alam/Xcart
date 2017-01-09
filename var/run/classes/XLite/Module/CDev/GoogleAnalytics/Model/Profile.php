@@ -9,7 +9,7 @@
 namespace XLite\Module\CDev\GoogleAnalytics\Model;
 
 
- class Profile extends \XLite\Module\CDev\Paypal\Model\Profile implements \XLite\Base\IDecorator
+ class Profile extends \XLite\Module\CDev\SocialLogin\Model\Profile implements \XLite\Base\IDecorator
 {
     /**
      * Google analytics cid

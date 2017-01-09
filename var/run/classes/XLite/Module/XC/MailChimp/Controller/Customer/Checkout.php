@@ -13,7 +13,7 @@ use \XLite\Module\XC\MailChimp\Core;
 /**
  * MailChimp customer subscriptions
  */
- class Checkout extends \XLite\Controller\Customer\CheckoutAbstract implements \XLite\Base\IDecorator
+ class Checkout extends \XLite\Module\XC\MultiVendor\Controller\Customer\Checkout implements \XLite\Base\IDecorator
 {
     /**
      * Call controller action

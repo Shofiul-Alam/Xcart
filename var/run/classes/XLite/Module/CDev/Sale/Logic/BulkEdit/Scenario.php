@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\Sale\Logic\BulkEdit;
 /**
  * @Decorator\Depend ("XC\BulkEditing")
  */
- class Scenario extends \XLite\Module\XC\CustomProductTabs\Logic\BulkEdit\Scenario implements \XLite\Base\IDecorator
+ class Scenario extends \XLite\Module\XC\FreeShipping\Logic\BulkEdit\Scenario implements \XLite\Base\IDecorator
 {
     /**
      * @return array

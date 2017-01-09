@@ -1,0 +1,16 @@
+{##
+ # Vendors sidebar block
+ #}
+
+<ul class="menu menu-list catalog-vendors">
+  {% for idx, _vendor in this.getVendors() %}
+  <li>
+    {% if _vendor.getVendorCompanyName() %}
+      <a href="{{ url('vendor', '', {'vendor_id': _vendor.profile_id}) }}">{{ _vendor.getVendorCompanyName() }}</a>
+    {% endif %}
+    {% if not _vendor.getVendorCompanyName() %}
+      <a href="{{ url('vendor', '', {'vendor_id': _vendor.profile_id}) }}">{{ t('na_vendor') }}</a>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>

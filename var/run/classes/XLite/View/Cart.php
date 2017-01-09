@@ -5,4 +5,4 @@ namespace XLite\View;
  *
  * @ListChild (list="center")
  */
-class Cart extends \XLite\Module\CDev\Coupons\View\Cart {}
+class Cart extends \XLite\Module\XC\CrispWhiteSkin\View\Cart {}

@@ -1,0 +1,8 @@
+{##
+ # Display product attribute values in invoice
+ #
+ # @ListChild (list="invoice.item.name", weight="10")
+ #}
+{% if this.isDetachedOrderItem(this.item) %}
+  <div class="detached-product">{{ t('You do not have access to this product, since it is being controlled by another vendor. Contact the administrator.') }}</div>
+{% endif %}

@@ -1,0 +1,11 @@
+{##
+ # Decline vendor form
+ #}
+
+<div class="fields">
+  {{ widget('\\XLite\\View\\FormField\\Textarea\\Simple', fieldName='statusComment', fieldOnly='true', placeholder=t('Enter decline reason here')) }}
+</div>
+
+<div class="actions">
+  {{ widget('\\XLite\\View\\Button\\Regular', label=t('Decline'), style='always-enabled', action='declineVendor') }}
+</div>

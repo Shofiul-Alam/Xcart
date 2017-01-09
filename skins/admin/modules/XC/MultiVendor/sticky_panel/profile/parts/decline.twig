@@ -1,0 +1,12 @@
+{##
+ # Decline vendor widget template
+ #}
+
+<div class="decline-vendor-dialog" style="display: none;">
+  <a href="#" class="close" title="{{ t('Close') }}">×</a>
+  {{ widget(template='modules/XC/MultiVendor/sticky_panel/profile/parts/decline_vendor.twig', entity=this.entity) }}
+</div>
+
+<div class="decline-vendor-link">
+  {{ widget('\\XLite\\View\\Button\\Regular', label=t('Decline vendor'), style='always-enabled open-popover', jsCode='void(0);') }}
+</div>

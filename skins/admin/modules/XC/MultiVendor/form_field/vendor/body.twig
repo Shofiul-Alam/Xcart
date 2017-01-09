@@ -1,0 +1,12 @@
+{##
+ # Vendor selector
+ #}
+
+{{ this.displayField() }}
+
+{% if this.hasOrders() %}
+  <span class="orders-present">
+      <i class="fa fa-exclamation-triangle"></i>
+      {{ this.getOrdersMessage()|raw }}
+  </span>
+{% endif %}

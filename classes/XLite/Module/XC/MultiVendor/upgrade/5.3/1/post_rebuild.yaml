@@ -1,0 +1,120 @@
+# vim: set ts=2 sw=2 sts=2 et:
+#
+# Data
+#
+# Copyright (c) 2011-present Qualiteam software Ltd. All rights reserved.
+# See https://www.x-cart.com/license-agreement.html for license details.
+
+XLite\Model\Notification:
+  - templatesDirectory: modules/XC/MultiVendor/order_advanced_changed
+    adminHeaderEnabled: true
+    adminGreetingEnabled: false
+    adminSignatureEnabled: true
+    customerHeaderEnabled: true
+    customerGreetingEnabled: true
+    customerSignatureEnabled: true
+  - templatesDirectory: modules/XC/MultiVendor/order_canceled
+    adminHeaderEnabled: true
+    adminGreetingEnabled: false
+    adminSignatureEnabled: true
+    customerHeaderEnabled: true
+    customerGreetingEnabled: true
+    customerSignatureEnabled: true
+  - templatesDirectory: modules/XC/MultiVendor/order_changed
+    adminHeaderEnabled: true
+    adminGreetingEnabled: false
+    adminSignatureEnabled: true
+    customerHeaderEnabled: true
+    customerGreetingEnabled: true
+    customerSignatureEnabled: true
+  - templatesDirectory: modules/XC/MultiVendor/order_created
+    adminHeaderEnabled: true
+    adminGreetingEnabled: false
+    adminSignatureEnabled: true
+    customerHeaderEnabled: true
+    customerGreetingEnabled: true
+    customerSignatureEnabled: true
+  - templatesDirectory: modules/XC/MultiVendor/order_failed
+    adminHeaderEnabled: true
+    adminGreetingEnabled: false
+    adminSignatureEnabled: true
+    customerHeaderEnabled: true
+    customerGreetingEnabled: true
+    customerSignatureEnabled: true
+  - templatesDirectory: modules/XC/MultiVendor/order_processed
+    adminHeaderEnabled: true
+    adminGreetingEnabled: false
+    adminSignatureEnabled: true
+    customerHeaderEnabled: true
+    customerGreetingEnabled: true
+    customerSignatureEnabled: true
+  - templatesDirectory: modules/XC/MultiVendor/vendor_signin_notification
+    availableForAdmin: true
+    availableForCustomer: true
+    enabledForAdmin: true
+    enabledForCustomer: true
+    adminHeaderEnabled: true
+    adminGreetingEnabled: true
+    adminSignatureEnabled: true
+    customerHeaderEnabled: true
+    customerGreetingEnabled: true
+    customerSignatureEnabled: true
+    translations:
+      - code: en
+        name: Vendor account created
+        description: This notification is sent when a new vendor account is created
+        customerSubject: Welcome!
+        customerText: ''
+        adminSubject: Vendor account created
+        adminText: ''
+      - code: ru
+        name: Создание учетной записи вендора
+        description: Данное уведомление отправляется, когда создается новый аккаунт вендора
+        customerSubject: Добро пожаловать!
+        customerText: ''
+        adminSubject: Зарегистрирован аккаунт продавца
+        adminText: ''
+  - templatesDirectory: modules/XC/MultiVendor/vendor_approved_notification
+    availableForAdmin: false
+    availableForCustomer: true
+    enabledForAdmin: false
+    enabledForCustomer: true
+    adminHeaderEnabled: false
+    adminGreetingEnabled: false
+    adminSignatureEnabled: false
+    customerHeaderEnabled: true
+    customerGreetingEnabled: true
+    customerSignatureEnabled: true
+    translations:
+      - code: en
+        name: Vendor account approved
+        description: This notification is sent after a new vendor account is approved by the store administrator
+        customerSubject: Your vendor account has been approved
+        customerText: ''
+      - code: ru
+        name: Учетная запись вендора подтверждена
+        description: Данное уведомление отправляется после подтверждения аккаунта вендора администратором
+        customerSubject: Ваш аккаунт продавца подтвержден
+        customerText: ''
+  - templatesDirectory: modules/XC/MultiVendor/vendor_declined_notification
+    availableForAdmin: false
+    availableForCustomer: true
+    enabledForAdmin: false
+    enabledForCustomer: true
+    adminHeaderEnabled: false
+    adminGreetingEnabled: false
+    adminSignatureEnabled: false
+    customerHeaderEnabled: true
+    customerGreetingEnabled: true
+    customerSignatureEnabled: true
+    translations:
+      - code: en
+        name: Vendor account rejected
+        description: This notification is sent after a new vendor account is rejected by the store administrator
+        customerSubject: Your vendor account was declined
+        customerText: ''
+      - code: ru
+        name: Учетная запись вендора отклонена
+        description: Данное уведомление отправляется, если аккаунт вендора был отклонен администратором
+        customerSubject: Ваш аккаунт продавца отклонен
+        customerText: ''

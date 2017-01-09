@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\Coupons\Controller\Admin;
 /**
  * Coupons
  */
-abstract class Promotions extends \XLite\Module\CDev\VolumeDiscounts\Controller\Admin\Promotions implements \XLite\Base\IDecorator
+abstract class Promotions extends \XLite\Module\XC\MultiVendor\Module\CDev\VolumeDiscounts\Controller\Admin\Promotions implements \XLite\Base\IDecorator
 {
     /**
      * Page key

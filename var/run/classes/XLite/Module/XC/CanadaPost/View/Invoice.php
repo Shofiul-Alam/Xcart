@@ -11,7 +11,7 @@ namespace XLite\Module\XC\CanadaPost\View;
 /**
  * Invoice widget
  */
-abstract class Invoice extends \XLite\View\InvoiceAbstract implements \XLite\Base\IDecorator
+abstract class Invoice extends \XLite\Module\XC\MultiVendor\Module\CDev\Coupons\View\Invoice implements \XLite\Base\IDecorator
 {
     /**
      * Register files from common repository

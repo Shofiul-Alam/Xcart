@@ -1,0 +1,103 @@
+/* vim: set ts=2 sw=2 sts=2 et: */
+
+/**
+ * Products details vendor section styles
+ *
+ * Copyright (c) 2011-present Qualiteam software Ltd. All rights reserved.
+ * See https://www.x-cart.com/license-agreement.html for license details.
+ */
+
+.sidebar {
+  .vendor-image {
+    margin-bottom: 12px;
+  }
+}
+
+.product-details {
+  .product-details-info {
+    div.share {
+      clear: both;
+    }
+  }
+
+  .product-details-info-vendor {
+    float: right;
+    margin-bottom: 30px;
+    max-width: 150px;
+
+    .vendor-image {
+      margin-bottom: 12px;
+
+      a {
+        outline: none;
+      }
+    }
+
+    .vendor-company-name {
+      color: #909090;
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .vendor-location {
+      color: #909090;
+      font-size: 16px;
+      margin: 0;
+    }
+
+    .vendor-view-profile {
+      margin: 12px 0;
+
+      .btn {
+        text-decoration: none;
+        width: 100%;
+        max-width: 200px;
+        color: white;
+      }
+    }
+  }
+}
+
+.product-quicklook {
+  .product-details-info-vendor {
+    float: none;
+    clear: both;
+    max-width: none;
+    margin-bottom: 0;
+
+    .vendor-image {
+      float: left;
+      margin: 0 10px 0 0;
+    }
+
+    .vendor-view-profile:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+}
+
+@media (max-width: @screen-xs-max) {
+  .product-details {
+    .product-details-info-vendor {
+      float: none;
+    }
+  }
+}
+
+@media (max-width: @screen-sm-max) {
+  .product-details {
+    .product-details-info-vendor {
+      float: left;
+    }
+  }
+}
+
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+  div.product-details {
+    .product-details-info {
+      width: 50%;
+    }
+  }
+}

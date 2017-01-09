@@ -94,10 +94,10 @@ class Attribute extends \XLite\Model\Attribute implements \Doctrine\ORM\Proxy\Pr
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', 'visible', 'id', 'position', 'decimals', 'productClass', 'attributeGroup', 'attribute_options', 'product', 'type', 'addToNew', 'attribute_properties', 'editLanguage', 'translations', '_previous_state');
+            return array('__isInitialized__', 'vendor', 'id', 'position', 'decimals', 'productClass', 'attributeGroup', 'attribute_options', 'product', 'type', 'addToNew', 'attribute_properties', 'editLanguage', 'translations', '_previous_state');
         }
 
-        return array('__isInitialized__', 'visible', 'id', 'position', 'decimals', 'productClass', 'attributeGroup', 'attribute_options', 'product', 'type', 'addToNew', 'attribute_properties', 'editLanguage', 'translations', '_previous_state');
+        return array('__isInitialized__', 'vendor', 'id', 'position', 'decimals', 'productClass', 'attributeGroup', 'attribute_options', 'product', 'type', 'addToNew', 'attribute_properties', 'editLanguage', 'translations', '_previous_state');
     }
 
     /**
@@ -206,34 +206,45 @@ class Attribute extends \XLite\Model\Attribute implements \Doctrine\ORM\Proxy\Pr
     /**
      * {@inheritDoc}
      */
-    public function getFilterWidgetClass()
+    public function addToNewProduct(\XLite\Model\Product $product)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getFilterWidgetClass', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addToNewProduct', array($product));
 
-        return parent::getFilterWidgetClass();
+        return parent::addToNewProduct($product);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function setVisible($visible)
+    public function isOfCurrentVendor()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVisible', array($visible));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isOfCurrentVendor', array());
 
-        return parent::setVisible($visible);
+        return parent::isOfCurrentVendor();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getVisible()
+    public function setVendor(\XLite\Model\Profile $vendor = NULL)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVisible', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVendor', array($vendor));
 
-        return parent::getVisible();
+        return parent::setVendor($vendor);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getVendor()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVendor', array());
+
+        return parent::getVendor();
     }
 
     /**
@@ -322,17 +333,6 @@ class Attribute extends \XLite\Model\Attribute implements \Doctrine\ORM\Proxy\Pr
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPosition', array($value));
 
         return parent::setPosition($value);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function addToNewProduct(\XLite\Model\Product $product)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addToNewProduct', array($product));
-
-        return parent::addToNewProduct($product);
     }
 
     /**

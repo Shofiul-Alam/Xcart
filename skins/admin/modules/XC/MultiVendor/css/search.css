@@ -1,0 +1,39 @@
+/* vim: set ts=2 sw=2 sts=2 et: */
+
+/**
+ * Admin area style tweaks for vendors
+ *
+ * Copyright (c) 2011-present Qualiteam software Ltd. All rights reserved.
+ * See https://www.x-cart.com/license-agreement.html for license details.
+ */
+
+.items-list.orders .cell.commission{
+    text-align: right;
+    padding-right: 18px !important;
+}
+
+.items-list.orders .cell.commission .cell{
+    line-height: 1;
+}
+
+.items-list.orders .cell.commission .cell span.value{
+    font-size: 12px;
+}
+
+.items-list.orders .cell.commission .auto-sign {
+    width: 50px;
+    margin-left: auto;
+}
+
+.items-list.orders .cell.commission .auto-sign img{
+    width: 100%;
+}
+
+.items-list.orders .profile .cell{
+    width: 230px;
+    max-width: 230px;
+}
+
+.table-pager .right{
+    margin-top: 7px;
+}

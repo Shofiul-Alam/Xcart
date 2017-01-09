@@ -11,7 +11,7 @@ namespace XLite\Module\XC\BulkEditing\Model\Repo;
 /**
  * The Product model repository
  */
- class Product extends \XLite\Module\XC\NextPreviousProduct\Model\Repo\Product implements \XLite\Base\IDecorator
+ class Product extends \XLite\Module\XC\MultiVendor\Model\Repo\Product implements \XLite\Base\IDecorator
 {
     const P_IDS = 'ids';
 

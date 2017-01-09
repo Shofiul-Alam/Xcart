@@ -11,7 +11,7 @@ namespace XLite\Module\XC\CanadaPost\Core;
 /**
  * Mailer
  */
-abstract class Mailer extends \XLite\Module\XC\Reviews\Core\Mailer implements \XLite\Base\IDecorator
+abstract class Mailer extends \XLite\Module\XC\Reviews\Module\XC\MultiVendor\Core\Mailer implements \XLite\Base\IDecorator
 {
     /**
      * FROM type

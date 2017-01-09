@@ -23,4 +23,4 @@ namespace XLite\Model;
  * @DiscriminatorColumn   (name="is_order", type="integer", length=1)
  * @DiscriminatorMap      ({1 = "XLite\Model\Order", 0 = "XLite\Model\Cart"})
  */
-class Order extends \XLite\Module\CDev\Coupons\Model\Order {}
+class Order extends \XLite\Module\CDev\GoogleAnalytics\Model\Order {}

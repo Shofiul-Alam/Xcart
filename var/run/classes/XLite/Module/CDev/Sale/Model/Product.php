@@ -12,7 +12,7 @@ namespace XLite\Module\CDev\Sale\Model;
  * Product
  *
  */
- class Product extends \XLite\Module\XC\AuctionInc\Model\Product implements \XLite\Base\IDecorator
+ class Product extends \XLite\Module\Shofi\ToolListing\Model\Product implements \XLite\Base\IDecorator
 {
     /**
      * The "Discount type" field is equal to this constant if it is "Sale price"

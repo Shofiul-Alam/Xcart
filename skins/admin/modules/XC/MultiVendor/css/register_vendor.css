@@ -1,0 +1,35 @@
+/* vim: set ts=2 sw=2 sts=2 et: */
+
+/**
+ * Register vendor account page styles
+ *
+ * Copyright (c) 2011-present Qualiteam software Ltd. All rights reserved.
+ * See https://www.x-cart.com/license-agreement.html for license details.
+ */
+
+.target-register-vendor #main .header h2 {
+  margin-top: 0;
+}
+
+.target-register-vendor #main .model-properties div.table-label {
+  width: 220px;
+}
+
+.target-register-vendor #main .model-properties div.model-form-buttons {
+  padding-left: 0;
+  display: inline-block;
+  padding-bottom: 25px;
+}
+
+.target-register-vendor #main .model-properties div.model-form-buttons .submit {
+  padding-right: 0;
+}
+
+.target-register-vendor #main .model-properties div.model-form-buttons .social-login {
+  display: none;
+}
+
+.target-register-vendor ul.main-table {
+  width: 560px;
+  margin: 0 auto;
+}

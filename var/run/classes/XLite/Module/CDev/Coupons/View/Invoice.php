@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\Coupons\View;
 /**
  * Invoice
  */
-abstract class Invoice extends \XLite\Module\CDev\XPaymentsConnector\View\Invoice implements \XLite\Base\IDecorator
+abstract class Invoice extends \XLite\Module\XC\MultiVendor\View\Invoice implements \XLite\Base\IDecorator
 {
     /**
      * Discount coupons (local cache)

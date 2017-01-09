@@ -1,0 +1,10 @@
+{##
+ # Product link
+ #}
+
+<a
+  href="{{ url('product', '', {'product_id': this.entity.getId()}) }}"
+  title="{{ this.entity.getName() }}"
+  class="vendor-product-name product-name">
+  {{ this.entity.getName() }}</a>
+<img src="{{ asset('images/spacer.gif') }}" class="right-fade" alt="" />

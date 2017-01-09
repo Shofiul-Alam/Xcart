@@ -6,4 +6,4 @@ namespace XLite\Model;
  * @Entity
  * @Table  (name="attribute_groups")
  */
-class AttributeGroup extends \XLite\Module\XC\ProductFilter\Model\AttributeGroup {}
+class AttributeGroup extends \XLite\Module\XC\MultiVendor\Model\AttributeGroup {}

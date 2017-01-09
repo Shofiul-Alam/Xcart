@@ -1,0 +1,29 @@
+/* vim: set ts=2 sw=2 sts=2 et: */
+
+/**
+ * Vendor account sticky panel style
+ *
+ * Copyright (c) 2011-present Qualiteam software Ltd. All rights reserved.
+ * See https://www.x-cart.com/license-agreement.html for license details.
+ */
+
+.sticky-panel .box .panel-cell.approve {
+  margin-left: 140px;
+  margin-right: 40px;
+}
+
+.popover-content .close {
+  text-decoration: none;
+}
+
+.popover-content .fields {
+  margin-top: 20px;
+}
+
+.popover-content .fields div.table-value textarea#statuscomment {
+  height: 100px;
+}
+
+.popover-content .actions {
+  text-align: center;
+}

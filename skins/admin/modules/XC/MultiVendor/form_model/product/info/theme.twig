@@ -1,0 +1,7 @@
+
+{% block _form_default_vendor_widget %}
+    <div class="input-wrapper hidden" v-bind:class="{{ '{' }}'hidden':!isVendorEdited(){{ '}' }}">
+        {{- form_widget(form) -}}
+    </div>
+    <div class="placeholder" v-on:click="setVendorEdited()" v-bind:class="{{ '{' }}'hidden':isVendorEdited(){{ '}' }}">{{ value_label }}</div>
+{% endblock %}

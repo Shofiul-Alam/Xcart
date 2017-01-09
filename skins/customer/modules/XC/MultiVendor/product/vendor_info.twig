@@ -1,0 +1,9 @@
+{##
+ # Product details vendor block
+ #}
+
+{% if this.hasVendor() %}
+  <div class="product-details-info-vendor">
+      {{ widget_list('product.vendor_info') }}
+  </div>
+{% endif %}

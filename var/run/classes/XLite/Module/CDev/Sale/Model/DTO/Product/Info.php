@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\Sale\Model\DTO\Product;
 /**
  * Product
  */
- class Info extends \XLite\Module\XC\FreeShipping\Model\DTO\Product\Info implements \XLite\Base\IDecorator
+ class Info extends \XLite\Module\XC\MultiVendor\Model\DTO\Product\FreeShippingInfo implements \XLite\Base\IDecorator
 {
     /**
      * @param mixed|\XLite\Model\Product $object

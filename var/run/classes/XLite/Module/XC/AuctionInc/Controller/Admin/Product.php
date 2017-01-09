@@ -11,7 +11,7 @@ namespace XLite\Module\XC\AuctionInc\Controller\Admin;
 /**
  * Product
  */
- class Product extends \XLite\Module\XC\CustomProductTabs\Controller\Admin\Product implements \XLite\Base\IDecorator
+ class Product extends \XLite\Module\XC\MultiVendor\Controller\Admin\Product implements \XLite\Base\IDecorator
 {
     /**
      * Get pages sections

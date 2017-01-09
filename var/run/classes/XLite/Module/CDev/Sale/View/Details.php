@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\Sale\View;
 /**
  * Details
  */
-abstract class Details extends \XLite\Module\XC\CustomProductTabs\View\Product\Details\Customer\Page\APage implements \XLite\Base\IDecorator
+abstract class Details extends \XLite\Module\XC\Reviews\View\Product\Details\Customer\Page\APage implements \XLite\Base\IDecorator
 {
     /**
      * Register CSS files

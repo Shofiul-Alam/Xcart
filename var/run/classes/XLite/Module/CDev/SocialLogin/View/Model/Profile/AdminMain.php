@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\SocialLogin\View\Model\Profile;
 /**
  * \XLite\View\Model\Profile\AdminMain
  */
- class AdminMain extends \XLite\View\Model\Profile\AdminMainAbstract implements \XLite\Base\IDecorator
+ class AdminMain extends \XLite\Module\XC\MultiVendor\View\Model\Profile\AdminMain implements \XLite\Base\IDecorator
 {
     /**
      * Save current form reference and initialize the cache

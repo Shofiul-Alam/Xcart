@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\Paypal\Model;
 /**
  * \XLite\Module\CDev\SocialLogin\Model\Profile
  */
- class Profile extends \XLite\Module\CDev\SocialLogin\Model\Profile implements \XLite\Base\IDecorator
+ class Profile extends \XLite\Model\ProfileAbstract implements \XLite\Base\IDecorator
 {
     /**
      * Auth provider (paypal)

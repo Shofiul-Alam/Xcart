@@ -17,11 +17,11 @@
 ;
 [database_details]
 hostspec = "localhost"
-socket = "/var/run/mysqld/mysqld.sock"
+socket = "/Applications/MAMP/tmp/mysql/mysql.sock"
 port = "3306"
 database = "c9"
-username = "shofiul"
-password = ""
+username = "root"
+password = "root"
 table_prefix = "xc_"
 
 ;
@@ -82,9 +82,9 @@ servers=
 ;   https://www.yourhost.com
 ;
 [host_details]
-http_host = "xcart-shofiul.c9users.io"
-https_host = "xcart-shofiul.c9users.io"
-web_dir = ""
+http_host = "localhost:8888"
+https_host = "localhost:8888"
+web_dir = "/xcart"
 domains = ""
 admin_self = "admin.php"
 cart_self = "cart.php"
@@ -171,8 +171,8 @@ image_magick_path =
 ; Installation authcode is created authomatically and stored in this section.
 ;
 [installer_details]
-auth_code = "X7QIXT1J"
-shared_secret_key = "585d98fa0a7cf9.00402552"
+auth_code = "4D257WNY"
+shared_secret_key = "587304eb47c010.86660393"
 
 ;
 ; Some options to optimize the store
@@ -230,7 +230,7 @@ installation_lng = en
 host     = "localhost"
 port = "3306"
 user     = "guest"
-password = ""
+password = "root"
 vhost    = "/"
 exchange = "xlite"
 

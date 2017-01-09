@@ -6,4 +6,4 @@
  * TODO: to revise
  * TODO[SINGLETON]: lowest priority
  */
-class XLite extends \XLite\Module\XC\ESelectHPP\XLite {}
+class XLite extends \XLite\Module\XC\MailChimp\XLite {}

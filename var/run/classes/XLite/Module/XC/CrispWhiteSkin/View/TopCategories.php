@@ -11,7 +11,7 @@ namespace XLite\Module\XC\CrispWhiteSkin\View;
 /**
  * TopCategories decorator
  */
-abstract class TopCategories extends \XLite\Module\XC\ProductFilter\View\TopCategories implements \XLite\Base\IDecorator
+abstract class TopCategories extends \XLite\Module\XC\ThemeTweaker\View\TopCategories implements \XLite\Base\IDecorator
 {
     /**
      * Return list of disallowed targets

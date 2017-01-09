@@ -1,0 +1,22 @@
+{##
+ # Vendor backend links
+ #
+ # @ListChild (list="sidebar.first.vendor_info", weight="50")
+ #}
+
+{% if this.isVendorLoggedIn() %}
+  <div class="btn-group vendor-backend-links">
+    <button class="btn regular-button dropdown-toggle" data-toggle="dropdown">
+      {{ t('My Settings') }}
+      <span class="caret"></span>
+    </button>
+  
+    <ul class="dropdown-menu" role="menu">
+      {% for idx, link in this.getVendorBackendLinks() %}
+      <li>
+        <a href="{{ link.url }}">{{ link.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

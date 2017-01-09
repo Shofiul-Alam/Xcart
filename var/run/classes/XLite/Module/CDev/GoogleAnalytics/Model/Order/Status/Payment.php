@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\GoogleAnalytics\Model\Order\Status;
 /**
  * Order payment status
  */
-abstract class Payment extends \XLite\Model\Order\Status\PaymentAbstract implements \XLite\Base\IDecorator
+abstract class Payment extends \XLite\Module\XC\MultiVendor\Model\Order\Status\Payment implements \XLite\Base\IDecorator
 {
     /**
      * Get open order statuses

@@ -1,0 +1,54 @@
+{##
+ # ____file_title____
+ #}
+
+<style>
+  .pac-container{
+    z-index: 9999999;
+  }
+  .sh-address {
+    width:100%;
+    margin-bottom: 15px;
+  }
+  input#address_autoComplete {
+    height: 60px;
+    min-height: 60px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    transition: all 240ms;
+  }
+  .button.submit {
+    width: 100%!important;
+  }
+  .profile-form {
+    max-width: 100%!important;
+  }
+  .ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.default-dialog.has-title {
+    width: 650px!important;
+  }
+  .widget-accountdialog {
+    max-width: 100%!important;
+  }
+
+</style>
+
+
+
+
+
+  {{ widget_list('customer.account.details.before') }}
+
+
+<div id="sh-address" class="address-dialog">
+
+  {{ widget('\\XLite\\View\\Model\\Profile\\Main', useBodyTemplate='1') }}
+
+
+  {{ widget_list('customer.account.details.after') }}
+
+</div>
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4_Boy_Ex-NFD5a6UFjK8avOx8Ftzdhjw&libraries=places&callback=initAutocomplete"
+        async defer></script>

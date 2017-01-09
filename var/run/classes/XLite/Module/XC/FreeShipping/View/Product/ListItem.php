@@ -12,7 +12,7 @@ namespace XLite\Module\XC\FreeShipping\View\Product;
 /**
  * Product list item widget
  */
- class ListItem extends \XLite\Module\XC\NextPreviousProduct\View\Product\ListItem implements \XLite\Base\IDecorator
+ class ListItem extends \XLite\View\Product\ListItemAbstract implements \XLite\Base\IDecorator
 {
     /**
      * Get CSS files

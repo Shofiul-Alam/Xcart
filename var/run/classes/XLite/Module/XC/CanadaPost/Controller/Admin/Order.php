@@ -11,7 +11,7 @@ namespace XLite\Module\XC\CanadaPost\Controller\Admin;
 /**
  * Order page controller (additional methods for "shipments" page)
  */
- class Order extends \XLite\Controller\Admin\OrderAbstract implements \XLite\Base\IDecorator
+ class Order extends \XLite\Module\XC\MultiVendor\Controller\Admin\Order implements \XLite\Base\IDecorator
 {
     /**
      * Page key

@@ -1,0 +1,12 @@
+{##
+ # Search by vendor
+ #
+ # @listChild (list="products.search.conditions.advanced", weight="300")
+ #}
+
+<tr>
+    <td class="option-name title-vendor">{{ t('Vendor') }}:</td>
+    <td>
+        {{ widget('\\XLite\\Module\\XC\\MultiVendor\\View\\VendorSelect', fieldName='vendorId', selectedVendorIds=[this.getCondition('vendorId')]) }}
+    </td>
+</tr>

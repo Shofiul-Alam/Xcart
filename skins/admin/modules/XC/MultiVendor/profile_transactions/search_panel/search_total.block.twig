@@ -1,0 +1,35 @@
+{##
+ # Search total block
+ #}
+
+<div class="search-total-transaction-wrapper">
+    <ul class='totals'>
+        <li>
+            <span class='name'>{{ t('Initial period balance') }}:</span>
+            <span class="amount">
+                {{ this.formatPrice(this.getBeforeTotal(), this.getSearchTotalCurrency()) }}
+            </span>
+        </li>
+        <li>
+            <span class='name'>{{ t('Vendors Income') }}:</span>
+            <span class="amount">
+                {{ this.formatPrice(this.getDebitTotal(), this.getSearchTotalCurrency()) }}
+            </span>
+        </li>
+        <li>
+            <span class='name'>{{ t('Vendors Expense') }}:</span>
+            <span class="amount">
+                {{ this.formatPrice(this.getCreditTotal(), this.getSearchTotalCurrency()) }}
+            </span>
+        </li>
+    </ul>
+</div>
+
+<div class='saldo-wrapper'>
+    <div class="saldo">
+        {{ t(this.getTotalText()) }}:
+        <span class="amount">
+            {{ this.formatPrice(this.getSaldo(), this.getSearchTotalCurrency()) }}
+        </span>
+    </div>
+</div>

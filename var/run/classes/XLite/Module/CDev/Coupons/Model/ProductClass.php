@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\Coupons\Model;
 /**
  * Product class
  */
-abstract class ProductClass extends \XLite\Module\XC\ProductFilter\Model\ProductClass implements \XLite\Base\IDecorator
+abstract class ProductClass extends \XLite\Module\XC\MultiVendor\Model\ProductClass implements \XLite\Base\IDecorator
 {
     /**
      * Coupons

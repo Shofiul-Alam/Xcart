@@ -1,0 +1,9 @@
+{##
+ # Vendor selector
+ #
+ # @ListChild (list="statistic.currency_selector.after")
+ #}
+
+{% if this.showVendorSelector() %}
+{{ widget('\\XLite\\Module\\XC\\MultiVendor\\View\\FormField\\Input\\Autocomplete\\Vendor', fieldOnly='true', fieldName='vendor', value=this.getSelectedVendor(), placeholder=t('Email or Company name')) }}
+{% endif %}

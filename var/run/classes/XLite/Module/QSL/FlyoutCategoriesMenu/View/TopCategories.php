@@ -11,7 +11,7 @@ namespace XLite\Module\QSL\FlyoutCategoriesMenu\View;
 /**
  * Sidebar categories list
  */
-abstract class TopCategories extends \XLite\Module\QSL\FlyoutCategoriesMenu\View\TopCategoriesAfterFilters implements \XLite\Base\IDecorator
+abstract class TopCategories extends \XLite\Module\XC\CrispWhiteSkin\View\TopCategories implements \XLite\Base\IDecorator
 {
     const MAX_NESTING_DEPTH = 3;
 

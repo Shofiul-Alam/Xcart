@@ -11,7 +11,7 @@ namespace XLite\Module\XC\FreeShipping\Model\Shipping;
 /**
  * Shipping method model
  */
- class Method extends \XLite\Model\Shipping\MethodAbstract implements \XLite\Base\IDecorator
+ class Method extends \XLite\Module\XC\MultiVendor\Model\Shipping\Method implements \XLite\Base\IDecorator
 {
     /**
      * Special code values for free ship and fixed fee methods

@@ -1,0 +1,11 @@
+{##
+ # Shipping methods list
+ #}
+{% for child in this.getChildren() %}
+    {% if child.hasShippableProducts() %}
+      <div class="shipping-vendor">
+        <div class="vendor-name">{{ this.getVendorName(child) }}</div>
+        {{ widget(this.getShippingListWidgetClass(), cart=child) }}
+      </div>
+    {% endif %}
+{% endfor %}

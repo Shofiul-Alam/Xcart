@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\Coupons\View\Order\Details\Admin;
 /**
  * Model
  */
- class Model extends \XLite\View\Order\Details\Admin\ModelAbstract implements \XLite\Base\IDecorator
+ class Model extends \XLite\Module\XC\MultiVendor\View\Order\Details\Admin\Model implements \XLite\Base\IDecorator
 {
     /**
      * Define modifier form field widget

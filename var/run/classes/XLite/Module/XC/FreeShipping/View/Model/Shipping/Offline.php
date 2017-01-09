@@ -11,7 +11,7 @@ namespace XLite\Module\XC\FreeShipping\View\Model\Shipping;
 /**
  * Offline shipping method view model
  */
- class Offline extends \XLite\View\Model\Shipping\OfflineAbstract implements \XLite\Base\IDecorator
+ class Offline extends \XLite\Module\XC\MultiVendor\View\Model\Shipping\Offline implements \XLite\Base\IDecorator
 {
     /**
      * Return true if method is 'Freight fixed fee'

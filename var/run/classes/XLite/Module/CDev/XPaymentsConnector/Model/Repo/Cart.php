@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\XPaymentsConnector\Model\Repo;
 /**
  * Cart repository
  */
- class Cart extends \XLite\Model\Repo\CartAbstract implements \XLite\Base\IDecorator
+ class Cart extends \XLite\Module\XC\MultiVendor\Model\Repo\Cart implements \XLite\Base\IDecorator
 {
     /**
      * Find carts by payment method names 

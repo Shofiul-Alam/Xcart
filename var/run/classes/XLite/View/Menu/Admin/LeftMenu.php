@@ -5,4 +5,4 @@ namespace XLite\View\Menu\Admin;
  *
  * @ListChild (list="admin.main.page.content.left", weight="100", zone="admin")
  */
-class LeftMenu extends \XLite\Module\CDev\Coupons\View\Menu\Admin\LeftMenu {}
+class LeftMenu extends \XLite\Module\CDev\SalesTax\View\Menu\Admin\LeftMenu {}

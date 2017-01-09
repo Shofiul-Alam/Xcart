@@ -94,10 +94,10 @@ class CleanURL extends \XLite\Model\CleanURL implements \Doctrine\ORM\Proxy\Prox
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', 'page', 'newsMessage', 'id', 'product', 'category', 'cleanURL', '_previous_state');
+            return array('__isInitialized__', 'page', 'vendor', 'newsMessage', 'id', 'product', 'category', 'cleanURL', '_previous_state');
         }
 
-        return array('__isInitialized__', 'page', 'newsMessage', 'id', 'product', 'category', 'cleanURL', '_previous_state');
+        return array('__isInitialized__', 'page', 'vendor', 'newsMessage', 'id', 'product', 'category', 'cleanURL', '_previous_state');
     }
 
     /**
@@ -223,6 +223,28 @@ class CleanURL extends \XLite\Model\CleanURL implements \Doctrine\ORM\Proxy\Prox
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPage', array());
 
         return parent::getPage();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setVendor(\XLite\Model\Profile $vendor = NULL)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVendor', array($vendor));
+
+        return parent::setVendor($vendor);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getVendor()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVendor', array());
+
+        return parent::getVendor();
     }
 
     /**

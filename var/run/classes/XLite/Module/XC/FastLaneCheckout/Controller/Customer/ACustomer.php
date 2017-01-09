@@ -13,7 +13,7 @@ use \XLite\Module\XC\FastLaneCheckout;
 /**
  * Disable default one-page checkout in case of fastlane checkout
  */
- class ACustomer extends \XLite\Module\XC\Reviews\Controller\Customer\ACustomer implements \XLite\Base\IDecorator
+ class ACustomer extends \XLite\Module\XC\MultiVendor\Module\XC\Reviews\Controller\Customer\ACustomer implements \XLite\Base\IDecorator
 {
     /**
      * Return true if checkout layout is used

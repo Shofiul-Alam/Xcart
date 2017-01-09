@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\XPaymentsConnector\View\Order\Details\Admin;
 /**
  * Order info 
  */
- class Info extends \XLite\View\Order\Details\Admin\InfoAbstract implements \XLite\Base\IDecorator
+ class Info extends \XLite\Module\XC\MultiVendor\View\Order\Details\Admin\Info implements \XLite\Base\IDecorator
 {
     /**
      * Get skin directory

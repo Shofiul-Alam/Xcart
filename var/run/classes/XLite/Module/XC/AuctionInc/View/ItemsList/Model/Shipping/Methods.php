@@ -11,7 +11,7 @@ namespace XLite\Module\XC\AuctionInc\View\ItemsList\Model\Shipping;
 /**
  * Shipping methods list
  */
- class Methods extends \XLite\View\ItemsList\Model\Shipping\MethodsAbstract implements \XLite\Base\IDecorator
+ class Methods extends \XLite\Module\XC\MultiVendor\View\ItemsList\Model\Shipping\Methods implements \XLite\Base\IDecorator
 {
     /**
      * Define columns structure

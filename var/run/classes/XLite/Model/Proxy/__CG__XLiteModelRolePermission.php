@@ -228,23 +228,34 @@ class Permission extends \XLite\Model\Role\Permission implements \Doctrine\ORM\P
     /**
      * {@inheritDoc}
      */
-    public function getPublicName()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPublicName', array());
-
-        return parent::getPublicName();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function isAllowed($code)
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'isAllowed', array($code));
 
         return parent::isAllowed($code);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function isVendorsPermission()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isVendorsPermission', array());
+
+        return parent::isVendorsPermission();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getPublicName()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPublicName', array());
+
+        return parent::getPublicName();
     }
 
     /**

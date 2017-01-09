@@ -11,7 +11,7 @@ namespace XLite\Module\XC\FreeShipping\View\FormModel\Product;
 /**
  * Class Info
  */
- class Info extends \XLite\View\FormModel\Product\InfoAbstract implements \XLite\Base\IDecorator
+ class Info extends \XLite\Module\XC\MultiVendor\View\FormModel\Product\Info implements \XLite\Base\IDecorator
 {
     /**
      * @return array

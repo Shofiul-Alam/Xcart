@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\GoSocial\Model;
 /**
  * Category 
  */
-abstract class Category extends \XLite\Module\XC\ProductFilter\Model\Category implements \XLite\Base\IDecorator
+abstract class Category extends \XLite\Model\CategoryAbstract implements \XLite\Base\IDecorator
 {
     /**
      * Custom Open graph meta tags

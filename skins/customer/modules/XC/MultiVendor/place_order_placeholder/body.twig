@@ -1,0 +1,21 @@
+{##
+ # Placeholder
+ #}
+
+<div class="place-order-placeholder hidden">
+    {{ this.displayCommentedData(this.getCommentedData()) }}
+    {% if this.shouldBeAbleToRemove() %}
+        {{ t('The following vendors have no shipping methods available: vendors', {'vendors': this.getVendorsList()})|raw }}
+        {% if this.hasShippableProducts() %}
+          <div class="remove-items">
+              {{ t('You can remove their products from cart to purchase the other products.', {'url': this.getRemoveActionURL()})|raw }}
+          </div>
+        {% endif %}
+    {% else %}
+        {{ t('Sorry, the products in your cart cannot be shipped to your location.') }}
+    {% endif %}
+    <div class="contact-us">
+        <span class="contact-us-title">{{ t('Contact us') }}:&nbsp;</span>
+        <span class="contact-us-phone">{{ this.getContactUsPhone() }}</span>
+    </div>
+</div>

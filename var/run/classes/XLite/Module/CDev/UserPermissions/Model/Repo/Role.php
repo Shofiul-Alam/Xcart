@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\UserPermissions\Model\Repo;
 /**
  * Role repository
  */
- class Role extends \XLite\Model\Repo\RoleAbstract implements \XLite\Base\IDecorator
+ class Role extends \XLite\Module\XC\MultiVendor\Model\Repo\Role implements \XLite\Base\IDecorator
 {
     /**
      * Get permanent role 

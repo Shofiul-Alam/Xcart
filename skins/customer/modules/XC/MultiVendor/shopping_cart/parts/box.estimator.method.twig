@@ -1,0 +1,11 @@
+{##
+ # Shipping estimator box
+ #}
+{% for child in this.cart.getChildren() %}
+    {% if this.isChildVisible(child) %}
+      <div class="vendor-shipping">
+          <div class="vendor-name">{{ this.getVendorName(child) }}</div>
+          {{ widget('XLite\\View\\ShippingEstimator\\SelectedMethod', cart=child) }}
+      </div>
+    {% endif %}
+{% endfor %}

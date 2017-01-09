@@ -11,7 +11,7 @@ namespace XLite\Module\QSL\FlyoutCategoriesMenu\View;
 /**
  * Color schemes adds
  */
-abstract class AView extends \XLite\Module\XC\ThemeTweaker\View\AView implements \XLite\Base\IDecorator
+abstract class AView extends \XLite\Module\XC\MultiVendor\View\AView implements \XLite\Base\IDecorator
 {
     /**
      * Return module common file

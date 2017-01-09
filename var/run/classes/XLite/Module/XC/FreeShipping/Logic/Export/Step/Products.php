@@ -12,7 +12,7 @@ namespace XLite\Module\XC\FreeShipping\Logic\Export\Step;
 /**
  * Decorate export product class
  */
- class Products extends \XLite\Module\XC\Upselling\Logic\Export\Step\Products implements \XLite\Base\IDecorator
+ class Products extends \XLite\Module\XC\MultiVendor\Logic\Export\Step\Products implements \XLite\Base\IDecorator
 {
     /**
      * Define columns

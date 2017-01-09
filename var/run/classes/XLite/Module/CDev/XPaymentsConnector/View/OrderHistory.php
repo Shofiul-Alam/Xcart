@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\XPaymentsConnector\View;
 /**
  * Order history widget
  */
- class OrderHistory extends \XLite\View\OrderHistoryAbstract implements \XLite\Base\IDecorator
+ class OrderHistory extends \XLite\Module\XC\MultiVendor\View\OrderHistory implements \XLite\Base\IDecorator
 {
     /**
      * Details getter

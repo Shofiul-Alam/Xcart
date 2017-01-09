@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\GoSocial\View\Model;
 /**
  * Category model widget extention
  */
- class Category extends \XLite\Module\XC\ProductFilter\View\Model\Category implements \XLite\Base\IDecorator
+ class Category extends \XLite\View\Model\CategoryAbstract implements \XLite\Base\IDecorator
 {
     /**
      * OG widgets into the default section

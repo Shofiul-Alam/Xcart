@@ -12,7 +12,7 @@ namespace XLite\Module\CDev\Sale\Controller\Admin;
 /**
  * Products list controller
  */
- class ProductList extends \XLite\Module\XC\ProductFilter\Controller\Admin\ProductList implements \XLite\Base\IDecorator
+ class ProductList extends \XLite\Module\XC\MultiVendor\Controller\Admin\ProductList implements \XLite\Base\IDecorator
 {
     /**
      * Do action clone

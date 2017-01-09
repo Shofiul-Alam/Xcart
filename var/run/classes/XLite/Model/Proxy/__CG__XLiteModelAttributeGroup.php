@@ -94,10 +94,10 @@ class AttributeGroup extends \XLite\Model\AttributeGroup implements \Doctrine\OR
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', 'id', 'position', 'productClass', 'attributes', 'editLanguage', 'translations', '_previous_state');
+            return array('__isInitialized__', 'vendor', 'id', 'position', 'productClass', 'attributes', 'editLanguage', 'translations', '_previous_state');
         }
 
-        return array('__isInitialized__', 'id', 'position', 'productClass', 'attributes', 'editLanguage', 'translations', '_previous_state');
+        return array('__isInitialized__', 'vendor', 'id', 'position', 'productClass', 'attributes', 'editLanguage', 'translations', '_previous_state');
     }
 
     /**
@@ -206,12 +206,34 @@ class AttributeGroup extends \XLite\Model\AttributeGroup implements \Doctrine\OR
     /**
      * {@inheritDoc}
      */
-    public function hasNonEmptyAttributes()
+    public function isOfCurrentVendor()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'hasNonEmptyAttributes', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isOfCurrentVendor', array());
 
-        return parent::hasNonEmptyAttributes();
+        return parent::isOfCurrentVendor();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setVendor(\XLite\Model\Profile $vendor = NULL)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVendor', array($vendor));
+
+        return parent::setVendor($vendor);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getVendor()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVendor', array());
+
+        return parent::getVendor();
     }
 
     /**

@@ -11,7 +11,7 @@ namespace XLite\Module\XC\FreeShipping\View\ItemsList\Model\Shipping;
 /**
  * Shipping carriers list
  */
- class Carriers extends \XLite\View\ItemsList\Model\Shipping\CarriersAbstract implements \XLite\Base\IDecorator
+ class Carriers extends \XLite\Module\XC\MultiVendor\View\ItemsList\Model\Shipping\Carriers implements \XLite\Base\IDecorator
 {
     /**
      * Disable removing special methods

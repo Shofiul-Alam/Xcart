@@ -17,7 +17,7 @@ use XLite\Module\XC\MailChimp\Main;
 /**
  * Class represents an order
  */
-abstract class Product extends \XLite\Module\XC\Reviews\Model\Product implements \XLite\Base\IDecorator
+abstract class Product extends \XLite\Module\XC\MultiVendor\Model\Product implements \XLite\Base\IDecorator
 {
     /**
      * Use product in segment conditions

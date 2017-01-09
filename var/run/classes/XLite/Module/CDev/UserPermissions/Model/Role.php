@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\UserPermissions\Model;
 /**
  * Role 
  */
-abstract class Role extends \XLite\Model\RoleAbstract implements \XLite\Base\IDecorator
+abstract class Role extends \XLite\Module\XC\MultiVendor\Model\Role implements \XLite\Base\IDecorator
 {
     /**
      * Enabled

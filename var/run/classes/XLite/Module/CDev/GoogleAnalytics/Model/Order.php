@@ -15,7 +15,7 @@ use XLite\Module\CDev\GoogleAnalytics\Logic\BackendActionExecutor;
 /**
  * Class Order
  */
-abstract class Order extends \XLite\Module\CDev\Paypal\Model\Order implements \XLite\Base\IDecorator
+abstract class Order extends \XLite\Module\CDev\XPaymentsConnector\Model\Order implements \XLite\Base\IDecorator
 {
     /**
      * @inheritDoc

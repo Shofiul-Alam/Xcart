@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\Coupons\View;
 /**
  * Cart
  */
-abstract class Cart extends \XLite\Module\XC\CrispWhiteSkin\View\Cart implements \XLite\Base\IDecorator
+abstract class Cart extends \XLite\Module\XC\MultiVendor\View\Cart implements \XLite\Base\IDecorator
 {
     /**
      * Discount coupons (local cache)

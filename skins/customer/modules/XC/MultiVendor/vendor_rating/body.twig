@@ -1,0 +1,37 @@
+{##
+ # Vendor rating body
+ #}
+
+<div class="vendor-ratings-details">
+  <div class="overall-block">
+    <div class="overall-rating">
+      {{ widget('\\XLite\\View\\VoteBar', rate=this.getOverallRating(), max=this.getMaxRatingValue()) }}
+      <span class="overall-rating-value">{{ this.getOverallRating() }}</span>
+    </div>
+    <div class="overall-count">
+      <span class="svg user-icon">{{ this.getSVGImage('modules/XC/MultiVendor/vendor_rating/user.svg')|raw }}</span>
+      <span class="count-value-block">{{ t('Votes:') }} <span class="count-value">{{ this.formatNumber(this.getVotesCount()) }}</span></span>
+    </div>
+  </div>
+  <table class="ratings-block">
+    {% for rank, rating in this.getRatings() %}
+      <tr class="rating-{{ rank }}">
+        <td class="rating-rank">
+          {{ rank }}
+        </td>
+        <td class="rating">
+          <span class="fa fa-star"></span>
+        </td>
+        <td class="percent">
+          <div class="progress rating-{{ rank }}">
+            <div class="progress-bar" role="progressbar" aria-valuenow="{{ rating.percent }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ rating.percent }}%"></div>
+          </div>
+        </td>
+        <td class="count">
+          {{ this.formatNumber(rating.count) }}
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+
+</div>

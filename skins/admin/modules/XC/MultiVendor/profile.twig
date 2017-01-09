@@ -1,0 +1,18 @@
+{##
+ # Profile cell
+ #}
+
+<div class="profile-box">
+  {% if this.isProfileRemoved(this.entity) %}
+    <span class="removed-profile-name">{{ this.getColumnValue(this.column, this.entity) }}</span>
+  {% else %}
+    {% if this.getColumnValue(this.column, this.entity) %}
+        <a href="{{ url('profile', '', {'profile_id': this.getOwnerVendorProfileId(this.entity)}) }}">{{ this.getColumnValue(this.column, this.entity) }}</a>
+    {% else %}
+        <span class="removed-profile-name">{{ t('Auto') }}</span>
+    {% endif %}
+  {% endif %}
+  {% if this.column.noWrap %}
+    <img src="{{ asset('images/spacer.gif') }}" class="right-fade" alt="" />
+  {% endif %}
+</div>

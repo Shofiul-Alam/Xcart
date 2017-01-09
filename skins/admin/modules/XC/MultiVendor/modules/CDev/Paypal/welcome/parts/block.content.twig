@@ -1,0 +1,12 @@
+{##
+ # Block content : items
+ #
+ # @ListChild (list="multivendorpaypal.welcome.content", weight="10")
+ #}
+<div class="content">
+    <div class="info">
+        <h2>{{ t('To accept online payments, you need a PayPal account')|raw }}</h2>
+        <div>{{ t('Use your [existing PayPal account] or [create a new one].', {'financialTabURL': this.getFinancialTabURL(), 'externalCreateURL': this.getExternalCreateURL()})|raw }}</div>
+        <div>{{ t('Note that PayPal services may not be available in some countries. If your country is not supported by PayPal, we can collect payments for you on our own account and withdraw the money at your request.')|raw }}</div>
+    </div>
+</div>

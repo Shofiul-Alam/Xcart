@@ -12,7 +12,7 @@ namespace XLite\Module\CDev\XPaymentsConnector\Model;
  * XPayments payment processor
  *
  */
- class Shipping extends \XLite\Model\ShippingAbstract implements \XLite\Base\IDecorator
+ class Shipping extends \XLite\Module\XC\MultiVendor\Model\Shipping implements \XLite\Base\IDecorator
 {
 
     /**

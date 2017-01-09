@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\VolumeDiscounts\View\ItemsList\Model;
 /**
  * Remove data items list
  */
-abstract class RemoveData extends \XLite\View\ItemsList\Model\RemoveDataAbstract implements \XLite\Base\IDecorator
+abstract class RemoveData extends \XLite\Module\XC\MultiVendor\View\ItemsList\Model\RemoveData implements \XLite\Base\IDecorator
 {
     const TYPE_DISCOUNTS = 'discounts';
 

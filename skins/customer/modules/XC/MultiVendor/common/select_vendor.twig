@@ -1,0 +1,14 @@
+{##
+ # Vendor selection dropdown box template
+ #}
+
+<select name="{{ this.getParam('fieldName') }}" size="{{ this.getParam('size') }}" {% if this.nonFixed %} style="width:200pt"
+        class="form-control" {% else %}  class="FixedSelect form-control" {% endif %}  >
+    <option value="">{{ t('All') }}</option>
+    {% for key, _vendor in this.getVendors() %}
+    <option value="{{ _vendor.getProfileId() }}"
+            {% if this.isVendorSelected(_vendor) %} selected="selected" {% endif %}>
+        {{ this.getVendorOptionCaption(_vendor) }}
+    </option>
+    {% endfor %}
+</select>

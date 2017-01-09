@@ -1,0 +1,7 @@
+{##
+ # Edit attributes
+ #}
+
+{% if this.getAttributeGroupVendorProfileURL() %}
+    {{ t('Vendor') }}: <a href="{{ this.getAttributeGroupVendorProfileURL() }}">{{ this.getAttributeGroupVendorProfileLinkCaption() }}</a>
+{% endif %}

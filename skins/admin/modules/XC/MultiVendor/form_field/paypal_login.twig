@@ -1,0 +1,35 @@
+{##
+ # Vendor link field template
+ #}
+
+{{ widget('\\XLite\\View\\FormField\\Input\\Text', fieldId='paypal-login', fieldName='paypalLogin', fieldOnly='true', value=this.getValue()) }}
+
+{% if this.getValue() %}
+    <a href="{{ url('financialInfo', 'updatePaypalStatus', {'profile_id': this.profile.getProfileId()}) }}" title="Update paypal login status">
+      {% if this.isCheckAvailable() %}
+          <div class="paypal-login-status">
+            <i class="fa fa-check"></i>
+            <span>{{ t('Account status info unavailable')|raw }}</span>
+          </div>
+      {% else %}
+          {% if not this.isExists() %}
+            <div class="paypal-login-status">
+              <i class="fa fa-exclamation-triangle"></i>
+              <span>{{ t('Cannot determine PayPal Account status')|raw }}</span>
+            </div>
+          {% endif %}
+          {% if this.isExists() and not this.isVerified() %}
+            <div class="paypal-login-status">
+              <i class="fa fa-check"></i>
+              <span>{{ t('Account exists but is not verified')|raw }}</span>
+            </div>
+          {% endif %}
+          {% if this.isExists() and this.isVerified() %}
+            <div class="paypal-login-status">
+              <i class="fa fa-shield"></i>
+              <span>{{ t('Account exists and is verified')|raw }}</span>
+            </div>
+          {% endif %}
+      {% endif %}
+    </a>
+{% endif %}

@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\XPaymentsConnector\View\ItemsList\Model\Order;
 /**
  * Order item. Fix for orders with no items 
  */
- class OrderItem extends \XLite\View\ItemsList\Model\OrderItemAbstract implements \XLite\Base\IDecorator 
+ class OrderItem extends \XLite\Module\XC\MultiVendor\View\ItemsList\Model\OrderItem implements \XLite\Base\IDecorator 
 {
     /**
      * Entity if it doesn't exist

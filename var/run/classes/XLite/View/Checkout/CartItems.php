@@ -5,4 +5,4 @@ namespace XLite\View\Checkout;
  *
  * @ListChild (list="checkout.review.selected", weight="10", zone="customer")
  */
-class CartItems extends \XLite\Module\CDev\Coupons\View\Checkout\CartItems {}
+class CartItems extends \XLite\Module\XC\MultiVendor\Module\CDev\Coupons\View\Checkout\CartItems {}

@@ -1,0 +1,6 @@
+{##
+ # Cell 'order' in transactions table
+ #}
+{% for orderEntity in this.getOrders(this.entity) %}
+  {{ widget(template='items_list/model/table/field.twig', linkedOrder=orderEntity) }}
+{% endfor %}

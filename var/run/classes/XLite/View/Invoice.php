@@ -5,4 +5,4 @@ namespace XLite\View;
  *
  * @ListChild (list="order.children", weight="30")
  */
-class Invoice extends \XLite\Module\CDev\Coupons\View\Invoice {}
+class Invoice extends \XLite\Module\CDev\XPaymentsConnector\View\Invoice {}

@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\GoSocial\Logic\Import\Processor;
 /**
  * Import categories processor extension
  */
- class Categories extends \XLite\Module\XC\ProductFilter\Logic\Import\Processor\Categories implements \XLite\Base\IDecorator
+ class Categories extends \XLite\Logic\Import\Processor\CategoriesAbstract implements \XLite\Base\IDecorator
 {
     /**
      * Define columns

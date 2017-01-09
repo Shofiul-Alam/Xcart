@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\XPaymentsConnector\View\ItemsList\Model\Order\Admin;
 /**
  * Search order
  */
- class Search extends \XLite\View\ItemsList\Model\Order\Admin\SearchAbstract implements \XLite\Base\IDecorator
+ class Search extends \XLite\Module\XC\MultiVendor\Module\CDev\Paypal\View\ItemsList\Model\Order\Admin\Search implements \XLite\Base\IDecorator
 {
     const SORT_BY_MODE_FRAUD =  'p.fraud';
     /**

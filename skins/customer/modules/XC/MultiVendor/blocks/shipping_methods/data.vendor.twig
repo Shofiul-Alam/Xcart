@@ -1,0 +1,11 @@
+{##
+ # Register form template
+ #
+ # @ListChild (list="checkout_fastlane.blocks.shipping_methods.append", weight="100")
+ #}
+
+{% if not this.isWarehouseMode() %}
+    <script type="application/javascript">
+        window.vendorsList = {{ this.getVendorsList()|raw }};
+    </script>
+{% endif %}

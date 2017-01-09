@@ -1,0 +1,9 @@
+{##
+ # Edit attributes
+ #}
+{% include 'items_list/model/table/field.twig' %}
+<div class="auto-sign">
+    {% if this.isAutoCommission(this.entity) %}
+        <img src="{{ this.getAutoImageUrl(this.entity) }}" alt="Auto" />
+    {% endif %}
+</div>

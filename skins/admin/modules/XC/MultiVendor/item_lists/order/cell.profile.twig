@@ -1,0 +1,32 @@
+{##
+ # Profile cell
+ #}
+
+{% if this.isDisplayCustomProfileInfo() %}
+
+{% if this.entity.origProfile.anonymous %}
+  <div class="profile-anonymous-icon" title="{{ t('Anonymous Customer') }}">
+    {{ this.getSVGImage('images/anonymous.svg')|raw }}
+  </div>
+{% endif %}
+{% if not this.entity.origProfile.anonymous %}
+  <div class="profile-icon">&nbsp;</div>
+{% endif %}
+
+<div class="profile-box">
+  {% if this.isProfileRemoved(this.entity) %}
+    <span class="removed-profile-name">{{ this.getColumnValue(this.column, this.entity) }}</span>
+  {% else %}
+    {{ this.getColumnValue(this.column, this.entity) }}
+  {% endif %}
+  {% if this.column.noWrap %}
+    <img src="{{ asset('images/spacer.gif') }}" class="right-fade" alt="" />
+  {% endif %}
+</div>
+
+{% else %}
+
+{% include 'items_list/model/table/order/cell.profile.twig' %}
+
+{% endif %}
+

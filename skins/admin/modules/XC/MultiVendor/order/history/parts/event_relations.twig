@@ -1,0 +1,20 @@
+{##
+ # Order history event date
+ #
+ # @ListChild (list="order.history.base.events.details", weight="35")
+ #}
+{% if this.hasRelations(this.event) %}
+  <li class="relations">
+    (
+    {{ t('Related to orders:') }}
+    {% for relatedOrder in this.getRelations(this.event) %}
+    {% if not this.isCurrentOrder(relatedOrder) %}
+      <a href="{{ this.getRelationURL(relatedOrder) }}">{{ relatedOrder.getPrintableOrderNumber() }}</a>
+    {% endif %}
+    {% if this.isCurrentOrder(relatedOrder) %}
+      <span>{{ relatedOrder.getPrintableOrderNumber() }}</span>
+    {% endif %}
+    {% endfor %}
+    )
+  </li>
+{% endif %}

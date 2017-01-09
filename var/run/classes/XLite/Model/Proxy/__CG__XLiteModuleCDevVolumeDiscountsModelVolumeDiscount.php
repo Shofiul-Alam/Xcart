@@ -94,10 +94,10 @@ class VolumeDiscount extends \XLite\Module\CDev\VolumeDiscounts\Model\VolumeDisc
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', 'id', 'value', 'type', 'subtotalRangeBegin', 'subtotalRangeEnd', 'membership', '_previous_state');
+            return array('__isInitialized__', 'vendor', 'id', 'value', 'type', 'subtotalRangeBegin', 'subtotalRangeEnd', 'membership', '_previous_state');
         }
 
-        return array('__isInitialized__', 'id', 'value', 'type', 'subtotalRangeBegin', 'subtotalRangeEnd', 'membership', '_previous_state');
+        return array('__isInitialized__', 'vendor', 'id', 'value', 'type', 'subtotalRangeBegin', 'subtotalRangeEnd', 'membership', '_previous_state');
     }
 
     /**
@@ -203,6 +203,28 @@ class VolumeDiscount extends \XLite\Module\CDev\VolumeDiscounts\Model\VolumeDisc
     }
 
     
+    /**
+     * {@inheritDoc}
+     */
+    public function isOfCurrentVendor()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isOfCurrentVendor', array());
+
+        return parent::isOfCurrentVendor();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getVendorLogin()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVendorLogin', array());
+
+        return parent::getVendorLogin();
+    }
+
     /**
      * {@inheritDoc}
      */

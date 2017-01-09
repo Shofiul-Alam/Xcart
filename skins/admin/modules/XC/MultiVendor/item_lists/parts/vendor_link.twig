@@ -1,0 +1,9 @@
+{##
+ # Edit attributes
+ #}
+
+{% if this.getVendorProfileURL(this.entity) %}
+    <div class="baseline">
+        {{ t('Vendor') }}: <a href="{{ this.getVendorProfileURL(this.entity) }}">{{ this.getVendorProfileLinkCaption(this.entity) }}</a>
+    </div>
+{% endif %}

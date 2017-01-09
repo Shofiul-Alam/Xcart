@@ -14,7 +14,7 @@ namespace XLite\Module\XC\FreeShipping\Logic\Order\Modifier;
  *
  * @Decorator\Depend("CDev\Coupons")
  */
- class ShippingCoupon extends \XLite\Logic\Order\Modifier\ShippingAbstract implements \XLite\Base\IDecorator
+ class ShippingCoupon extends \XLite\Module\XC\MultiVendor\Logic\Order\Modifier\Shipping implements \XLite\Base\IDecorator
 {
     /**
      * Return true if order item must be excluded from shipping rates calculations

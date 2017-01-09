@@ -13,7 +13,7 @@ use XLite\Core\Database;
 /**
  * General settings widget extension
  */
- class Settings extends \XLite\Module\XC\ProductFilter\View\Model\Settings implements \XLite\Base\IDecorator
+ class Settings extends \XLite\Module\XC\MultiVendor\View\Model\Settings implements \XLite\Base\IDecorator
 {
     /**
      * Get CSS files

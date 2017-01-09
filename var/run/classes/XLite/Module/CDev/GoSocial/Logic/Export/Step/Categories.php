@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\GoSocial\Logic\Export\Step;
 /**
  * Categories
  */
-abstract class Categories extends \XLite\Module\XC\ProductFilter\Logic\Export\Step\Categories implements \XLite\Base\IDecorator
+abstract class Categories extends \XLite\Logic\Export\Step\CategoriesAbstract implements \XLite\Base\IDecorator
 {
     /**
      * Define columns

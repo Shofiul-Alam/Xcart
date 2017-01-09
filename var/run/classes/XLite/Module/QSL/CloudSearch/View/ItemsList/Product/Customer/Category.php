@@ -15,7 +15,7 @@ use XLite\Module\QSL\CloudSearch\Model\Repo\Product;
 /**
  * Search products item list
  */
- class Category extends \XLite\Module\XC\NextPreviousProduct\View\ItemList\Product\Customer\Category\Main implements \XLite\Base\IDecorator
+ class Category extends \XLite\View\ItemsList\Product\Customer\Category\MainAbstract implements \XLite\Base\IDecorator
 {
     use FilterWithCloudSearchTrait;
 

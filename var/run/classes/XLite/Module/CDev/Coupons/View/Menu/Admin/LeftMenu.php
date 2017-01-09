@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\Coupons\View\Menu\Admin;
 /**
  * Left menu widget
  */
- class LeftMenu extends \XLite\Module\CDev\SalesTax\View\Menu\Admin\LeftMenu implements \XLite\Base\IDecorator
+ class LeftMenu extends \XLite\Module\XC\MultiVendor\Module\XC\Reviews\View\Menu\Admin\LeftMenu implements \XLite\Base\IDecorator
 {
     /**
      * Define quick links

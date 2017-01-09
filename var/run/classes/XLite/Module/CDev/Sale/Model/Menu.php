@@ -13,7 +13,7 @@ namespace XLite\Module\CDev\Sale\Model;
  *
  * @Decorator\Depend ("CDev\SimpleCMS")
  */
- class Menu extends \XLite\Module\QSL\SpecialOffersBase\Model\Menu implements \XLite\Base\IDecorator
+ class Menu extends \XLite\Module\CDev\SimpleCMS\Model\MenuAbstract implements \XLite\Base\IDecorator
 {
     const DEFAULT_SALE_PAGE = '{sale}';
 

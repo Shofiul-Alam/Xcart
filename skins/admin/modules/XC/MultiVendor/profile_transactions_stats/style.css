@@ -1,0 +1,101 @@
+/* vim: set ts=2 sw=2 sts=2 et: */
+
+/**
+ * Profiles list styles
+ *
+ * Copyright (c) 2011-present Qualiteam software Ltd. All rights reserved.
+ * See https://www.x-cart.com/license-agreement.html for license details.
+ */
+.xc-multivendor-searchpanel-profiletransactionsstats-main .search-conditions {
+    width: 100%;
+}
+
+.xc-multivendor-searchpanel-profiletransactionsstats-main .search-conditions .profile-condition #profile {
+    width: 400px;
+}
+
+/*
+* <Chosen styles fixes>
+*/
+.xc-multivendor-searchpanel-profiletransactionsstats-main .search-conditions .profile-condition .chosen-container .chosen-single,
+.items-list.profile-transaction .list .create .cell.profile .subfield-profile .chosen-container .chosen-single  {
+    height: auto;
+    display: block;
+    width: 100%;
+    height: 35px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    -webkit-transition: all border-color ease-in-out .15s, box-shadow ease-in-out .15s ease-out;
+    -moz-transition: all border-color ease-in-out .15s, box-shadow ease-in-out .15s ease-out;
+    -o-transition: all border-color ease-in-out .15s, box-shadow ease-in-out .15s ease-out;
+    transition: all border-color ease-in-out .15s, box-shadow ease-in-out .15s ease-out;
+}
+
+.xc-multivendor-searchpanel-profiletransactionsstats-main .search-conditions .profile-condition .chosen-container .chosen-search input,
+.items-list.profile-transaction .list .create .cell.profile .subfield-profile .chosen-container .chosen-search input {
+    width: 100%;
+}
+
+.xc-multivendor-searchpanel-profiletransactionsstats-main .search-conditions .profile-condition .chosen-container .chosen-single span,
+.items-list.profile-transaction .list .create .cell.profile .subfield-profile .chosen-container .chosen-single span {
+    font-size: 14px;
+}
+
+.xc-multivendor-searchpanel-profiletransactionsstats-main .search-conditions .profile-condition .chosen-container .chosen-drop .chosen-results em,
+.items-list.profile-transaction .list .create .cell.profile .subfield-profile .chosen-container .chosen-drop .chosen-results em {
+    vertical-align: baseline;
+}
+
+.items-list.profile-transaction .list .create .cell.profile .subfield-profile .chosen-container input[type='text'] {
+    padding: 4px 20px 4px 4px;
+    height: auto;
+    margin: 1px 0;
+    font-size: 1em;
+    line-height: normal;
+}
+/*
+* </Chosen styles fixes>
+*/
+
+.xc-multivendor-searchpanel-profiletransactionsstats-main .search-conditions .clear-search {
+    margin-left: 12px;
+}
+
+.xc-multivendor-searchpanel-profiletransactionsstats-main .search-conditions .clear-search .clear-search-image svg {
+    width: 22px;
+    height: 24px;
+    vertical-align: text-bottom;
+}
+
+.xc-multivendor-searchpanel-profiletransactionsstats-main .search-conditions .actions {
+    margin-left: auto;
+    width: 120px;
+}
+
+.xc-multivendor-searchpanel-profiletransactionsstats-main .search-conditions .description-condition {
+    flex-grow: 1;
+}
+
+.xc-multivendor-searchpanel-profiletransactionsstats-main .search-conditions .description-condition .input-field-wrapper,
+.xc-multivendor-searchpanel-profiletransactionsstats-main .search-conditions .description-condition .input-field-wrapper input[type='text'] {
+    width: 100%;
+}
+
+.xc-multivendor-searchpanel-profiletransactionsstats-main .search-conditions .description-condition .input-field-wrapper input[type='text'] {
+    min-width: 190px;
+}
+
+.xc-multivendor-searchpanel-profiletransactionsstats-main .search-conditions .actions button.btn.submit {
+    margin-bottom: auto;
+}

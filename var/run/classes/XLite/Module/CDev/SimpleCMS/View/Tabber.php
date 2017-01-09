@@ -13,7 +13,7 @@ namespace XLite\Module\CDev\SimpleCMS\View;
  * switch between the page using Tabs at the top.
  *
  */
-abstract class Tabber extends \XLite\View\TabberAbstract implements \XLite\Base\IDecorator
+abstract class Tabber extends \XLite\Module\XC\MultiVendor\View\Tabber implements \XLite\Base\IDecorator
 {
     /**
      * Checks whether the tabs navigation is visible, or not

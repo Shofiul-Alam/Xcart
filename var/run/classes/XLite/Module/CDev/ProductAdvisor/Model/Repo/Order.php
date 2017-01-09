@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\ProductAdvisor\Model\Repo;
 /**
  * The Order model repository
  */
- class Order extends \XLite\Module\XC\ThemeTweaker\Model\Repo\Order implements \XLite\Base\IDecorator
+ class Order extends \XLite\Module\XC\MultiVendor\Model\Repo\Order implements \XLite\Base\IDecorator
 {
     /**
      * Find customers who ordered product with specified product ID 

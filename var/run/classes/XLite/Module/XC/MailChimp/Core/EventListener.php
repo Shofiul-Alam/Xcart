@@ -8,7 +8,7 @@
 
 namespace XLite\Module\XC\MailChimp\Core;
 
- class EventListener extends \XLite\Core\EventListenerAbstract implements \XLite\Base\IDecorator
+ class EventListener extends \XLite\Module\XC\MultiVendor\Core\EventListener implements \XLite\Base\IDecorator
 {
     /**
      * Get listeners

@@ -94,10 +94,10 @@ class Coupon extends \XLite\Module\CDev\Coupons\Model\Coupon implements \Doctrin
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', 'id', 'code', 'enabled', 'value', 'type', 'comment', 'uses', 'dateRangeBegin', 'dateRangeEnd', 'totalRangeBegin', 'totalRangeEnd', 'usesLimit', 'usesLimitPerUser', 'singleUse', 'productClasses', 'memberships', 'usedCoupons', 'categories', '_previous_state');
+            return array('__isInitialized__', 'vendor', 'id', 'code', 'enabled', 'value', 'type', 'comment', 'uses', 'dateRangeBegin', 'dateRangeEnd', 'totalRangeBegin', 'totalRangeEnd', 'usesLimit', 'usesLimitPerUser', 'singleUse', 'productClasses', 'memberships', 'usedCoupons', 'categories', '_previous_state');
         }
 
-        return array('__isInitialized__', 'id', 'code', 'enabled', 'value', 'type', 'comment', 'uses', 'dateRangeBegin', 'dateRangeEnd', 'totalRangeBegin', 'totalRangeEnd', 'usesLimit', 'usesLimitPerUser', 'singleUse', 'productClasses', 'memberships', 'usedCoupons', 'categories', '_previous_state');
+        return array('__isInitialized__', 'vendor', 'id', 'code', 'enabled', 'value', 'type', 'comment', 'uses', 'dateRangeBegin', 'dateRangeEnd', 'totalRangeBegin', 'totalRangeEnd', 'usesLimit', 'usesLimitPerUser', 'singleUse', 'productClasses', 'memberships', 'usedCoupons', 'categories', '_previous_state');
     }
 
     /**
@@ -239,6 +239,50 @@ class Coupon extends \XLite\Module\CDev\Coupons\Model\Coupon implements \Doctrin
     /**
      * {@inheritDoc}
      */
+    public function isOfCurrentVendor()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isOfCurrentVendor', array());
+
+        return parent::isOfCurrentVendor();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function checkCompatibility(\XLite\Model\Order $order = NULL)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'checkCompatibility', array($order));
+
+        return parent::checkCompatibility($order);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function checkUnique(\XLite\Model\Order $order)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'checkUnique', array($order));
+
+        return parent::checkUnique($order);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function isSameVendor(\XLite\Model\Order $order)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isSameVendor', array($order));
+
+        return parent::isSameVendor($order);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function isAbsolute()
     {
 
@@ -300,28 +344,6 @@ class Coupon extends \XLite\Module\CDev\Coupons\Model\Coupon implements \Doctrin
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'isValidForProduct', array($product));
 
         return parent::isValidForProduct($product);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function checkCompatibility(\XLite\Model\Order $order = NULL)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'checkCompatibility', array($order));
-
-        return parent::checkCompatibility($order);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function checkUnique(\XLite\Model\Order $order)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'checkUnique', array($order));
-
-        return parent::checkUnique($order);
     }
 
     /**

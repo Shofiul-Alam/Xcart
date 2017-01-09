@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\Coupons\Model;
 /**
  * Order
  */
-abstract class Order extends \XLite\Module\CDev\GoogleAnalytics\Model\Order implements \XLite\Base\IDecorator
+abstract class Order extends \XLite\Module\XC\MultiVendor\Module\CDev\Paypal\Model\Order implements \XLite\Base\IDecorator
 {
     /**
      * Used coupons

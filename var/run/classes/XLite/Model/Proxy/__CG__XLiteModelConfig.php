@@ -94,10 +94,10 @@ class Config extends \XLite\Model\Config implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', 'config_id', 'name', 'category', 'type', 'orderby', 'value', 'newValue', 'widgetParameters', 'editLanguage', 'translations', '_previous_state');
+            return array('__isInitialized__', 'vendor', 'config_id', 'name', 'category', 'type', 'orderby', 'value', 'newValue', 'widgetParameters', 'editLanguage', 'translations', '_previous_state');
         }
 
-        return array('__isInitialized__', 'config_id', 'name', 'category', 'type', 'orderby', 'value', 'newValue', 'widgetParameters', 'editLanguage', 'translations', '_previous_state');
+        return array('__isInitialized__', 'vendor', 'config_id', 'name', 'category', 'type', 'orderby', 'value', 'newValue', 'widgetParameters', 'editLanguage', 'translations', '_previous_state');
     }
 
     /**
@@ -203,6 +203,28 @@ class Config extends \XLite\Model\Config implements \Doctrine\ORM\Proxy\Proxy
     }
 
     
+    /**
+     * {@inheritDoc}
+     */
+    public function setVendor($value)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVendor', array($value));
+
+        return parent::setVendor($value);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getVendor()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVendor', array());
+
+        return parent::getVendor();
+    }
+
     /**
      * {@inheritDoc}
      */

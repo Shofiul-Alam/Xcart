@@ -261,6 +261,17 @@ class Role extends \XLite\Model\Role implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
+    public function isVendor()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isVendor', array());
+
+        return parent::isVendor();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function isPermissionAllowedOr($code)
     {
 

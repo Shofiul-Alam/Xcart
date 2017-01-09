@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\UserPermissions\View\Menu\Admin;
 /**
  * Left menu widget
  */
-abstract class LeftMenu extends \XLite\Module\QSL\SpecialOffersBase\View\Menu\Admin\LeftMenu implements \XLite\Base\IDecorator
+abstract class LeftMenu extends \XLite\Module\XC\MailChimp\View\Menu\Admin\LeftMenu implements \XLite\Base\IDecorator
 {
     /**
      * Define and set handler attributes; initialize handler

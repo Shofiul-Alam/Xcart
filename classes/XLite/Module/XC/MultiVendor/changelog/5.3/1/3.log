@@ -1,0 +1,4 @@
+Version 5.3.1.3
+
+Fixes
+2016-09-19 - [Bug] Fatal error while upgrading the module MultiVendor from 52x to 52x on certain MySQL versions. #BUG-3871 (Sergey Elmanov) #MultiVendor

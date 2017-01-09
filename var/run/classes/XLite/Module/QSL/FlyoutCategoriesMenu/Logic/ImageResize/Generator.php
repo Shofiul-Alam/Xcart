@@ -11,7 +11,7 @@ namespace XLite\Module\QSL\FlyoutCategoriesMenu\Logic\ImageResize;
 /**
  * ImageResize
  */
- class Generator extends \XLite\Logic\ImageResize\GeneratorAbstract implements \XLite\Base\IDecorator
+ class Generator extends \XLite\Module\XC\MultiVendor\Logic\ImageResize\Generator implements \XLite\Base\IDecorator
 {
     /**
      * Returns available image sizes

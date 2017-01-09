@@ -11,7 +11,7 @@ namespace XLite\Module\XC\AuctionInc\Controller\Admin;
 /**
  * Shipping methods management page controller
  */
- class ShippingMethods extends \XLite\Controller\Admin\ShippingMethodsAbstract implements \XLite\Base\IDecorator
+ class ShippingMethods extends \XLite\Module\XC\MultiVendor\Controller\Admin\ShippingMethods implements \XLite\Base\IDecorator
 {
     /**
      * Get current country code

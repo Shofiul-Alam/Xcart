@@ -94,10 +94,10 @@ class ProductClass extends \XLite\Model\ProductClass implements \Doctrine\ORM\Pr
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', 'coupons', 'categories', 'id', 'position', 'attributes', 'attribute_groups', 'editLanguage', 'translations', '_previous_state');
+            return array('__isInitialized__', 'coupons', 'vendor', 'id', 'position', 'attributes', 'attribute_groups', 'editLanguage', 'translations', '_previous_state');
         }
 
-        return array('__isInitialized__', 'coupons', 'categories', 'id', 'position', 'attributes', 'attribute_groups', 'editLanguage', 'translations', '_previous_state');
+        return array('__isInitialized__', 'coupons', 'vendor', 'id', 'position', 'attributes', 'attribute_groups', 'editLanguage', 'translations', '_previous_state');
     }
 
     /**
@@ -228,45 +228,34 @@ class ProductClass extends \XLite\Model\ProductClass implements \Doctrine\ORM\Pr
     /**
      * {@inheritDoc}
      */
-    public function hasNonEmptyAttributes()
+    public function isOfCurrentVendor()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'hasNonEmptyAttributes', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isOfCurrentVendor', array());
 
-        return parent::hasNonEmptyAttributes();
+        return parent::isOfCurrentVendor();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function hasNonEmptyGroups()
+    public function setVendor(\XLite\Model\Profile $vendor = NULL)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'hasNonEmptyGroups', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVendor', array($vendor));
 
-        return parent::hasNonEmptyGroups();
+        return parent::setVendor($vendor);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function addCategories(\XLite\Model\Category $categories)
+    public function getVendor()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addCategories', array($categories));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVendor', array());
 
-        return parent::addCategories($categories);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getCategories()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCategories', array());
-
-        return parent::getCategories();
+        return parent::getVendor();
     }
 
     /**

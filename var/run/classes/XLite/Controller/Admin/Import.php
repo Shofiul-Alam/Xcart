@@ -3,4 +3,4 @@ namespace XLite\Controller\Admin;
 /**
  * Import controller
  */
-class Import extends \XLite\Module\XC\ProductFilter\Controller\Admin\Import {}
+class Import extends \XLite\Module\XC\MultiVendor\Controller\Admin\Import {}

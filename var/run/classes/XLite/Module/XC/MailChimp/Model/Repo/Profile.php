@@ -11,7 +11,7 @@ namespace XLite\Module\XC\MailChimp\Model\Repo;
 /**
  * The Profile model repository
  */
-abstract class Profile extends \XLite\Module\XC\Reviews\Model\Repo\Profile implements \XLite\Base\IDecorator
+abstract class Profile extends \XLite\Module\XC\MultiVendor\Model\Repo\Profile implements \XLite\Base\IDecorator
 {
     /**
      * Check if profile has any MailChimp subscriptions

@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\SocialLogin\Core;
 /**
  * Authorization routine
  */
- class Auth extends \XLite\Core\AuthAbstract implements \XLite\Base\IDecorator
+ class Auth extends \XLite\Module\XC\MultiVendor\Core\Auth implements \XLite\Base\IDecorator
 {
     /**
      * Logs in user to cart

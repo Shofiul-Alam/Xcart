@@ -1,0 +1,15 @@
+Version 5.3.2.0
+
+Improvements
+2016-10-27 - [Change] In a store with a large number of products adding a new membership resulted in an error (memory limit exceeded/timeout). Now the process of adding a membership is performed iteratively. #XCN-7193 (Sergey Elmanov) #Core #MultiVendor
+2016-10-03 - [Change] For the module "Not Finished Orders", a new setting was added: "The order will be created" (possible values - "by payment callback (Failed + Cancel)' (the only option that was available previously) and 'by pressing “Place order” button' #XCN-6892 (Vladimir Semyonov) #Paypal #MultiVendor #NotFinishedOrders
+
+Fixes
+2016-11-25 - [Bug] A wrong URL for My settings -> Sales on vendor page. #BUG-4181 (Michael Lipinski) #MultiVendor
+2016-11-24 - [Bug] Volume discounts created by a vendor were not showing up in the Admin area. #BUG-4164 (Michael Lipinski) #MultiVendor
+2016-10-25 - [Bug] Error on a transaction list with the module MultiVendor enabled and Not Finished Orders disabled. To fix the problem, a new directive was added - @Decorator\Rely (Relies on the module state, but - unlike @Decorator\Depend - does not affect the position.) #BUG-3994 (Sergey Elmanov) #Core #MultiVendor #NotFinishedOrders
+2016-10-13 - [Bug] Vendor commission payment transaction was not showing if the order was created with the status Authorized. #BUG-3968 (Michael Lipinski) #MultiVendor
+2016-10-03 - [Bug] Added a new setting for the module Multivendor: "Role to assign to new vendor users". This setting allows you to set the role with which all new vendors should be created. #BUG-3913 (Vladimir Semyonov) #MultiVendor
+2016-09-29 - [Bug] Unnecessary multiple payment transactions were created in the database if the order was created with the module Multivendor enabled and configured to operate in the Separate shops mode. #BUG-3910 (Michael Lipinski) #MultiVendor
+2016-08-09 - [Bug] In the Warehouse mode in the module Multivendor, vendors must not have access to the fields Free shipping and Shipping Freight on the product editing page. #BUG-3607 (Sergey Elmanov) #Core #MultiVendor #FreeShipping
+2016-08-03 - [Bug] Root admin can now edit manual vendor transactions. #BUG-3437 (Michael Lipinski) #Core #MultiVendor

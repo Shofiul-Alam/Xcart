@@ -1,0 +1,7 @@
+Version 5.3.1.2
+
+Fixes
+2016-08-31 - [Bug] Multivendor Adding Product Issue: product was persistent before setVendor() call because of image saving procedure. Fixed. #BUG-3805 (Michael Lipinski) #MultiVendor
+2016-08-31 - [Bug] MultiVendor module: Fatal error on submit financial info if paypalLogin is used by another vendor. Fixed. #BUG-3799 (Michael Lipinski) #MultiVendor
+2016-08-31 - [Bug] Fatal error on a page "Vendor products" when the module "UPC/ISBN and Mnf#/Vendor# fields" was enabled. Fixed. #BUG-3808 (Eugene Dementjev) #MultiVendor
+2016-08-05 - [Bug] MultiVendor module: Fatal error on submit financial info if paypalLogin is empty and other profile has empty paypalLogin. Fixed. #BUG-3685 (Vladimir Semyonov) #MultiVendor

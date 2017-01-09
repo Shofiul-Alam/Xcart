@@ -1,0 +1,21 @@
+{##
+ # Top sellers Vendor selector
+
+ # @ListChild (list="top_sellers.selectors", weight="5")
+ #}
+
+{% if this.showVendorSelector() %}
+  <form class="vendor-fake-form">
+    <table class="top-sellers-selectors vendor-selector">
+      <tr>
+        <td class="title">{{ t('For the vendor') }}:</td>
+        <td class="field">
+          {{ widget('\\XLite\\Module\\XC\\MultiVendor\\View\\FormField\\Input\\Autocomplete\\Vendor', fieldOnly='true', fieldName='vendor', value=this.getSelectedVendor(), placeholder=t('Email or Company name')) }}
+        </td>
+        <td class="reset">
+          <a href="{{ this.getVendorLink('') }}">{{ t('Reset') }}</a>
+        </td>
+      </tr>
+    </table>
+  </form>
+{% endif %}

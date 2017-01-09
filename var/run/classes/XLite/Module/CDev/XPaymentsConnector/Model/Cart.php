@@ -12,7 +12,7 @@ namespace XLite\Module\CDev\XPaymentsConnector\Model;
  * XPayments payment processor
  *
  */
- class Cart extends \XLite\Module\XC\MailChimp\Model\Cart implements \XLite\Base\IDecorator
+ class Cart extends \XLite\Module\XC\MailChimp\Module\XC\MultiVendor\Model\Cart implements \XLite\Base\IDecorator
 {
     /**
      * Flag to force cart recalculation

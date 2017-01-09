@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\XPaymentsConnector\View\Order\Details\Admin;
 /**
  * Payment actions unit widget (button capture or refund or void etc)
  */
- class PaymentActions extends \XLite\View\Order\Details\Admin\PaymentActionsAbstract implements \XLite\Base\IDecorator
+ class PaymentActions extends \XLite\Module\XC\MultiVendor\View\Order\Details\Admin\PaymentActions implements \XLite\Base\IDecorator
 {
     /**
      * Get transactions, and do some initialization

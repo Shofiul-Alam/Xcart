@@ -94,10 +94,10 @@ class Product extends \XLite\Model\Product implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', 'featuredProducts', 'ogMeta', 'useCustomOG', 'views_stats', 'purchase_stats', 'participateSale', 'discountType', 'salePriceValue', 'auctionIncData', 'xcPendingBulkEdit', 'tabs', 'freeShip', 'freightFixedFee', 'useAsSegmentCondition', 'reviews', 'reviewAddedByUser', 'votesCount', 'reviewsCount', 'averageRating', 'upsellingProducts', 'upsellingParentProducts', 'product_id', 'price', 'sku', 'enabled', 'weight', 'useSeparateBox', 'boxWidth', 'boxLength', 'boxHeight', 'itemsPerBox', 'free_shipping', 'taxable', 'javascript', 'arrivalDate', 'date', 'updateDate', 'needProcess', 'categoryProducts', 'order_items', 'images', 'inventoryEnabled', 'amount', 'lowLimitEnabledCustomer', 'lowLimitEnabled', 'lowLimitAmount', 'productClass', 'taxClass', 'attributes', 'attributeValueC', 'attributeValueT', 'attributeValueS', 'attrSepTab', 'sold', 'quickData', 'attrValues', 'memberships', 'cleanURLs', 'metaDescType', 'sales', 'xcPendingExport', 'editLanguage', 'translations', '_previous_state', 'entityVersion');
+            return array('__isInitialized__', 'featuredProducts', 'ogMeta', 'useCustomOG', 'views_stats', 'purchase_stats', 'participateSale', 'discountType', 'salePriceValue', 'productLocation', 'aprice', 'toolDetails', 'auctionIncData', 'xcPendingBulkEdit', 'freeShip', 'freightFixedFee', 'useAsSegmentCondition', 'vendor', 'reviews', 'reviewAddedByUser', 'votesCount', 'reviewsCount', 'averageRating', 'upsellingProducts', 'upsellingParentProducts', 'product_id', 'price', 'sku', 'enabled', 'weight', 'useSeparateBox', 'boxWidth', 'boxLength', 'boxHeight', 'itemsPerBox', 'free_shipping', 'taxable', 'javascript', 'arrivalDate', 'date', 'updateDate', 'needProcess', 'categoryProducts', 'order_items', 'images', 'inventoryEnabled', 'amount', 'lowLimitEnabledCustomer', 'lowLimitEnabled', 'lowLimitAmount', 'productClass', 'taxClass', 'attributes', 'attributeValueC', 'attributeValueT', 'attributeValueS', 'attrSepTab', 'sold', 'quickData', 'attrValues', 'memberships', 'cleanURLs', 'metaDescType', 'sales', 'xcPendingExport', 'editLanguage', 'translations', '_previous_state', 'entityVersion');
         }
 
-        return array('__isInitialized__', 'featuredProducts', 'ogMeta', 'useCustomOG', 'views_stats', 'purchase_stats', 'participateSale', 'discountType', 'salePriceValue', 'auctionIncData', 'xcPendingBulkEdit', 'tabs', 'freeShip', 'freightFixedFee', 'useAsSegmentCondition', 'reviews', 'reviewAddedByUser', 'votesCount', 'reviewsCount', 'averageRating', 'upsellingProducts', 'upsellingParentProducts', 'product_id', 'price', 'sku', 'enabled', 'weight', 'useSeparateBox', 'boxWidth', 'boxLength', 'boxHeight', 'itemsPerBox', 'free_shipping', 'taxable', 'javascript', 'arrivalDate', 'date', 'updateDate', 'needProcess', 'categoryProducts', 'order_items', 'images', 'inventoryEnabled', 'amount', 'lowLimitEnabledCustomer', 'lowLimitEnabled', 'lowLimitAmount', 'productClass', 'taxClass', 'attributes', 'attributeValueC', 'attributeValueT', 'attributeValueS', 'attrSepTab', 'sold', 'quickData', 'attrValues', 'memberships', 'cleanURLs', 'metaDescType', 'sales', 'xcPendingExport', 'editLanguage', 'translations', '_previous_state', 'entityVersion');
+        return array('__isInitialized__', 'featuredProducts', 'ogMeta', 'useCustomOG', 'views_stats', 'purchase_stats', 'participateSale', 'discountType', 'salePriceValue', 'productLocation', 'aprice', 'toolDetails', 'auctionIncData', 'xcPendingBulkEdit', 'freeShip', 'freightFixedFee', 'useAsSegmentCondition', 'vendor', 'reviews', 'reviewAddedByUser', 'votesCount', 'reviewsCount', 'averageRating', 'upsellingProducts', 'upsellingParentProducts', 'product_id', 'price', 'sku', 'enabled', 'weight', 'useSeparateBox', 'boxWidth', 'boxLength', 'boxHeight', 'itemsPerBox', 'free_shipping', 'taxable', 'javascript', 'arrivalDate', 'date', 'updateDate', 'needProcess', 'categoryProducts', 'order_items', 'images', 'inventoryEnabled', 'amount', 'lowLimitEnabledCustomer', 'lowLimitEnabled', 'lowLimitAmount', 'productClass', 'taxClass', 'attributes', 'attributeValueC', 'attributeValueT', 'attributeValueS', 'attrSepTab', 'sold', 'quickData', 'attrValues', 'memberships', 'cleanURLs', 'metaDescType', 'sales', 'xcPendingExport', 'editLanguage', 'translations', '_previous_state', 'entityVersion');
     }
 
     /**
@@ -459,6 +459,72 @@ class Product extends \XLite\Model\Product implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
+    public function setProductLocation(\XLite\Module\Shofi\ToolListing\Model\Product\ProductLocation $productLocation = NULL)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setProductLocation', array($productLocation));
+
+        return parent::setProductLocation($productLocation);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getProductLocation()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getProductLocation', array());
+
+        return parent::getProductLocation();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setAprice(\XLite\Module\Shofi\ToolListing\Model\Product\Aprice $aprice = NULL)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setAprice', array($aprice));
+
+        return parent::setAprice($aprice);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getAprice()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getAprice', array());
+
+        return parent::getAprice();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getToolDetails()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getToolDetails', array());
+
+        return parent::getToolDetails();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setToolDetails(\XLite\Module\Shofi\ToolListing\Model\Product\ToolDetails $toolDetails = NULL)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setToolDetails', array($toolDetails));
+
+        return parent::setToolDetails($toolDetails);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function setAuctionIncData(\XLite\Module\XC\AuctionInc\Model\ProductAuctionInc $auctionIncData = NULL)
     {
 
@@ -476,39 +542,6 @@ class Product extends \XLite\Model\Product implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getAuctionIncData', array());
 
         return parent::getAuctionIncData();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function cloneEntity()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'cloneEntity', array());
-
-        return parent::cloneEntity();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function addTabs(\XLite\Module\XC\CustomProductTabs\Model\Product\Tab $tabs)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addTabs', array($tabs));
-
-        return parent::addTabs($tabs);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getTabs()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getTabs', array());
-
-        return parent::getTabs();
     }
 
     /**
@@ -619,6 +652,83 @@ class Product extends \XLite\Model\Product implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getFrontURLForMailChimp', array($withAttributes));
 
         return parent::getFrontURLForMailChimp($withAttributes);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function cloneEntity()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'cloneEntity', array());
+
+        return parent::cloneEntity();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function isOfCurrentVendor()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isOfCurrentVendor', array());
+
+        return parent::isOfCurrentVendor();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getVendorLogin()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVendorLogin', array());
+
+        return parent::getVendorLogin();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getVendorId()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVendorId', array());
+
+        return parent::getVendorId();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getOrdersCount()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getOrdersCount', array());
+
+        return parent::getOrdersCount();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setVendor(\XLite\Model\Profile $vendor = NULL)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVendor', array($vendor));
+
+        return parent::setVendor($vendor);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getVendor()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVendor', array());
+
+        return parent::getVendor();
     }
 
     /**

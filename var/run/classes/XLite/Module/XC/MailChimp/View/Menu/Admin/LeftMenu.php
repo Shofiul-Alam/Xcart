@@ -11,7 +11,7 @@ namespace XLite\Module\XC\MailChimp\View\Menu\Admin;
 /**
  * Top menu widget
  */
-abstract class LeftMenu extends \XLite\Module\XC\News\View\Menu\Admin\LeftMenu implements \XLite\Base\IDecorator
+abstract class LeftMenu extends \XLite\Module\XC\MultiVendor\Module\CDev\Coupons\View\Menu\Admin\LeftMenu implements \XLite\Base\IDecorator
 {
     /**
      * Define and set handler attributes; initialize handler

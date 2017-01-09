@@ -13,7 +13,7 @@ use XLite\Module\QSL\CloudSearch\Main;
 /**
  * CloudSearch dashboard page controller (Promotion section)
  */
- class Promotions extends \XLite\Controller\Admin\PromotionsAbstract implements \XLite\Base\IDecorator
+ class Promotions extends \XLite\Module\XC\MultiVendor\Module\CDev\Coupons\Controller\Admin\Promotions implements \XLite\Base\IDecorator
 {
     /**
      * Page key

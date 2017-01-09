@@ -11,7 +11,7 @@ namespace XLite\Module\XC\CanadaPost\Model;
 /**
  * Class represents an order
  */
-abstract class Order extends \XLite\Model\OrderAbstract implements \XLite\Base\IDecorator
+abstract class Order extends \XLite\Module\XC\MultiVendor\Model\Order implements \XLite\Base\IDecorator
 {
     /**
      * Canada Post parcels (reference to the Canada Post parcels model)

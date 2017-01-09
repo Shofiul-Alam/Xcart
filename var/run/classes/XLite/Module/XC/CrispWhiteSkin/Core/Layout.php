@@ -11,7 +11,7 @@ namespace XLite\Module\XC\CrispWhiteSkin\Core;
 /**
  * Layout manager
  */
- class Layout extends \XLite\Module\XC\Reviews\Core\Layout implements \XLite\Base\IDecorator
+ class Layout extends \XLite\Module\XC\MultiVendor\Core\Layout implements \XLite\Base\IDecorator
 {
     // /**
     //  * @return array

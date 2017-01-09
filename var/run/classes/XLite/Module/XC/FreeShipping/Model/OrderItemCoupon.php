@@ -14,7 +14,7 @@ namespace XLite\Module\XC\FreeShipping\Model;
  *
  * @Decorator\Depend("CDev\Coupons")
  */
- class OrderItemCoupon extends \XLite\Model\OrderItemAbstract implements \XLite\Base\IDecorator
+ class OrderItemCoupon extends \XLite\Module\XC\MultiVendor\Model\OrderItem implements \XLite\Base\IDecorator
 {
     /**
      * Return true if order item is forced to be 'free shipping' item

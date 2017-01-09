@@ -1,0 +1,275 @@
+/* vim: set ts=2 sw=2 sts=2 et: */
+
+/**
+ * Profiles list styles
+ *
+ * Copyright (c) 2011-present Qualiteam software Ltd. All rights reserved.
+ * See https://www.x-cart.com/license-agreement.html for license details.
+ */
+
+.items-list-table table.list tbody.lines tr.line td.profile,
+.items-list-table table.list tbody.lines tr.line td.author {
+    min-width: 180px;
+    max-width: 400px;
+}
+
+.profile-transaction.items-list .list-header .button-container button.create-inline.disabled {
+    cursor: not-allowed;
+    pointer-events: auto;
+}
+
+.items-list-table table.list tbody.lines tr.line td.description {
+    white-space: normal;
+}
+
+.items-list-table table.list tbody.lines tr.line td.date {
+    min-width: 100px;
+}
+
+.items-list-table table.list tbody tr.line td.date .date {
+    color: #333;
+}
+
+.items-list-table table.list tbody tr.line td.date .time {
+    color: #8f8f8f;
+}
+.items-list-table table.list thead th.debit,
+.items-list-table table.list thead th.credit {
+    white-space: normal;
+}
+.items-list-table table.list tr.line td.debit .cell,
+.items-list-table table.list tr.line td.credit .cell{
+    width: 100px;
+}
+
+.items-list-table table.list tr.line td.debit .cell input,
+.items-list-table table.list tr.line td.credit .cell input{
+    width: 80%;
+}
+
+.items-list-table table.list tr.line .profile-box span{
+    font-size: 14px;
+}
+
+.items-list-table table.list tr.line .profile-box .auto-sign{
+    display: inline-block;
+    width: 80px;
+    margin-left: 10px;
+}
+
+.items-list-table table.list tr.line .profile-box .auto-sign img{
+    width: 100%;
+}
+
+.table-pager .box{
+    height: auto;
+
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;
+
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+}
+
+.table-pager .right{
+    margin: 13px 0;
+    position: relative;
+}
+
+.items-list-table{
+    margin-bottom: 60px;
+}
+
+.search-total-transaction-wrapper .totals,
+.table-pager .right .saldo-wrapper {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.table-pager .right .saldo-wrapper {
+    text-align: right;
+    width: 500px;
+    position: absolute;
+    bottom: -55px;
+    right: 0;
+}
+
+.table-pager .right .saldo {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.table-pager .right .saldo .amount {
+    font-size: 20px;
+    color: #333;
+}
+
+.search-total-transaction-wrapper .totals li{
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;
+
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+
+    white-space: nowrap;
+}
+
+.search-total-transaction-wrapper .totals .name {
+    color: #333;
+    line-height: normal;
+    padding-right: 15px;
+    font-weight: 600;
+}
+.search-total-transaction-wrapper .totals .amount {
+    color: #333;
+}
+
+/*
+    Search panel styles
+*/
+.xc-multivendor-searchpanel-profiletransactions-main .search-conditions{
+    min-width: auto;
+
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;
+
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    justify-content: flex-start;
+}
+
+.xc-multivendor-searchpanel-profiletransactions-main .search-conditions .dateRange-condition div.table-value input[type="text"]{
+    width: 240px;
+}
+
+.items-list.profile-transaction .list .create .cell.profile,
+.items-list.profile-transaction .list .create .cell.author {
+    max-width: 300px;
+}
+
+.items-list.profile-transaction .list .create .cell.profile .profiletransaction-profile select,
+.items-list.profile-transaction .list .create .cell.author .profiletransaction-author select,
+.items-list.profile-transaction .list .create .cell.profile .profiletransaction-profile .chosen-container,
+.items-list.profile-transaction .list .create .cell.author .profiletransaction-author .chosen-container {
+    max-width: 290px;
+}
+/*
+* <Chosen styles fixes>
+*/
+.xc-multivendor-searchpanel-profiletransactions-main .search-conditions .profile-condition .chosen-container .chosen-single,
+.items-list.profile-transaction .list .create .cell.profile .subfield-profile .chosen-container .chosen-single  {
+    height: auto;
+    display: block;
+    width: 100%;
+    height: 35px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    -webkit-transition: all border-color ease-in-out .15s, box-shadow ease-in-out .15s ease-out;
+    -moz-transition: all border-color ease-in-out .15s, box-shadow ease-in-out .15s ease-out;
+    -o-transition: all border-color ease-in-out .15s, box-shadow ease-in-out .15s ease-out;
+    transition: all border-color ease-in-out .15s, box-shadow ease-in-out .15s ease-out;
+}
+
+.xc-multivendor-searchpanel-profiletransactions-main .search-conditions .profile-condition .chosen-container .chosen-search input,
+.items-list.profile-transaction .list .create .cell.profile .subfield-profile .chosen-container .chosen-search input {
+    width: 100%;
+}
+
+.xc-multivendor-searchpanel-profiletransactions-main .search-conditions .profile-condition .chosen-container .chosen-single span,
+.items-list.profile-transaction .list .create .cell.profile .subfield-profile .chosen-container .chosen-single span {
+    font-size: 14px;
+}
+
+.xc-multivendor-searchpanel-profiletransactions-main .search-conditions .profile-condition .chosen-container .chosen-drop .chosen-results em,
+.items-list.profile-transaction .list .create .cell.profile .subfield-profile .chosen-container .chosen-drop .chosen-results em {
+    vertical-align: baseline;
+}
+
+.items-list.profile-transaction .list .create .cell.profile .subfield-profile .chosen-container input[type='text']{
+    padding: 4px 20px 4px 4px;
+    height: auto;
+    margin: 1px 0;
+    font-size: 1em;
+    line-height: normal;
+}
+
+.items-list.profile-transaction .list .create .cell.profile,
+.items-list.profile-transaction .list .create .cell.author {
+    max-width: 300px;
+}
+
+.items-list.profile-transaction .list .create .cell.profile .profiletransaction-profile select,
+.items-list.profile-transaction .list .create .cell.author .profiletransaction-author select,
+.items-list.profile-transaction .list .create .cell.profile .profiletransaction-profile .chosen-container,
+.items-list.profile-transaction .list .create .cell.author .profiletransaction-author .chosen-container {
+    max-width: 290px;
+}
+/*
+* </Chosen styles fixes>
+*/
+
+.xc-multivendor-searchpanel-profiletransactions-main .search-conditions .clear-search {
+    margin-left: 12px;
+}
+
+.xc-multivendor-searchpanel-profiletransactions-main .search-conditions .clear-search .clear-search-image svg {
+    width: 22px;
+    height: 24px;
+    vertical-align: text-bottom;
+}
+
+.xc-multivendor-searchpanel-profiletransactions-main .search-conditions .actions {
+    margin-left: auto;
+}
+
+.xc-multivendor-searchpanel-profiletransactions-main .search-conditions .descSubstr-condition {
+    flex-grow: 1;
+}
+
+.xc-multivendor-searchpanel-profiletransactions-main .search-conditions .descSubstr-condition .input-field-wrapper,
+.xc-multivendor-searchpanel-profiletransactions-main .search-conditions .descSubstr-condition .input-field-wrapper input[type='text'] {
+    width: 100%;
+}
+
+.xc-multivendor-searchpanel-profiletransactions-main .search-conditions .descSubstr-condition .input-field-wrapper input[type='text'] {
+    min-width: 190px;
+}
+
+.xc-multivendor-searchpanel-profiletransactions-main .search-conditions .actions button.btn.submit {
+    margin-bottom: auto;
+}

@@ -1,0 +1,439 @@
+# vim: set ts=2 sw=2 sts=2 et:
+#
+# Fixtures
+#
+# Copyright (c) 2011-present Qualiteam software Ltd. All rights reserved.
+# See https://www.x-cart.com/license-agreement.html for license details.
+
+XLite\Model\Config:
+  - name: multivendor_mode
+    category: XC\MultiVendor
+    type: XLite\Module\XC\MultiVendor\View\FormField\Select\MultiVendorMode
+    orderby: 100
+    value: W
+    translations:
+      - code: en
+        option_name: Multivendor mode
+        option_comment: <strong>Warehouse</strong> One consolidated order for all vendors - one shipment. Shipping cost is calculated for delivery from the warehouse of the marketplace owner. Vendors cannot edit the order.<br/><br/><strong>Vendors as separate shops</strong> One vendor - one order. Shipping cost is calculated for delivery from the vendor address. Vendor has full order editing capabilities.<br/><br/>Coupons and discounts work the same in both the modes.
+      - code: ru
+        option_name: Режим работы Multivendor
+        option_comment: <strong>Склад</strong> Один общий заказ для вендоров - одна общая посылка/отправление. Стоимость доставки рассчитывается для доставки от склада владельца торговой площадки. Вендоры не могут редактировать заказ.<br/><br/><strong>Каждый вендор - отдельный продавец</strong> Один вендор - один заказ. Стоимость доставки считается от адреса вендора. Вендор может полноценно редактировать свои заказы.<br/><br/>Купоны и скидки работают одинаково в обоих режимах.
+  - name: revshare_fee_dst
+    category: XC\MultiVendor
+    type: XLite\View\FormField\Input\Text\Percent
+    orderby: 110
+    value: 10
+    translations:
+      - code: en
+        option_name: Order DST based commission rate
+        option_comment: Order DST based commission rate (%) - A percentage of Order DST to be deducted from vendor revenue earnings as a commission fee to the storefront operator. The value set in this field will be used as <strong>&lt;DST_Commission&gt;</strong> when calculating a vendor's total revenue from a sale based on the formula: <br><br>Vendor_Sale_Revenue = (SUM(Items) - DISCOUNTS) * (1 - DST_Commission) + Shipping * (1 - Shipping_Commission)
+      - code: ru
+        option_name: Комиссия со стоимости товаров в заказе
+        option_comment: Комиссия со стоимости товаров в заказе (%) - Процент стоимости товаров в заказе, удерживаемый с продавца в качестве комиссии в пользу оператора торговой площадки. Значение, заданное в этом поле, будет использоваться как <strong>&lt;DST_Commission&gt;</strong> при расчете суммарной прибыли продавца от продажи товара по формуле: <br><br>Vendor_Sale_Revenue = (SUM(Items) - DISCOUNTS) * (1 - DST_Commission) + Shipping * (1 - Shipping_Commission)
+  - name: revshare_fee_shipping
+    category: XC\MultiVendor
+    type: XLite\View\FormField\Input\Text\Percent
+    orderby: 120
+    value: 10
+    translations:
+      - code: en
+        option_name: Order shipping cost based commission rate
+        option_comment: Order shipping cost based commission rate (%) - A percentage of order shipping cost to be deducted from vendor revenue earnings as a commission fee to the storefront operator. The value set in this field will be used as <strong>&lt;Shipping_Commission&gt;</strong> when calculating a vendor's total revenue from a sale based on the formula: <br><br>Vendor_Sale_Revenue = (SUM(Items) - DISCOUNTS) * (1 - DST_Commission) + Shipping * (1 - Shipping_Commission)
+      - code: ru
+        option_name: Комиссия со стоимости доставки заказа
+        option_comment: Комиссия со стоимости доставки заказа (%) - Процент стоимости доставки заказа, удерживаемый с продавца в качестве комиссии в пользу оператора торговой площадки. Значение, заданное в этом поле, будет использоваться как <strong>&lt;Shipping_Commission&gt;</strong> при расчете суммарной прибыли продавца от продажи товара по формуле: <br><br>Vendor_Sale_Revenue = (SUM(Items) - DISCOUNTS) * (1 - DST_Commission) + Shipping * (1 - Shipping_Commission)
+  - name: attributes_access_mode
+    category: XC\MultiVendor
+    type: XLite\Module\XC\MultiVendor\View\FormField\Select\AttrAccessMode
+    orderby: 130
+    value: R
+    translations:
+      - code: en
+        option_name: Vendor access to global attributes
+      - code: ru
+        option_name: Использование вендором глобальных атрибутов
+  - name: enable_vendor_filter
+    category: XC\MultiVendor
+    type: XLite\View\FormField\Input\Checkbox\OnOffWithoutOffLabel
+    orderby: 140
+    value: true
+    translations:
+      - code: en
+        option_name: Show vendor list in product filter
+      - code: ru
+        option_name: Отображать список вендоров в фильтре товаров
+  - name: enable_vendor_block
+    category: XC\MultiVendor
+    type: XLite\View\FormField\Input\Checkbox\OnOffWithoutOffLabel
+    orderby: 150
+    value: true
+    translations:
+      - code: en
+        option_name: Show vendor list in sidebar
+      - code: ru
+        option_name: Отображать список вендоров в боковой панели
+  - name: enable_vendor_rating
+    category: XC\MultiVendor
+    type: XLite\View\FormField\Input\Checkbox\OnOffWithoutOffLabel
+    orderby: 160
+    value: true
+    translations:
+      - code: en
+        option_name: 'Show rating & reviews on vendor profile page'
+      - code: ru
+        option_name: 'Отображать отзывы и оценки на странице вендора'
+  - name: vendor_change_reviews_allowed
+    category: XC\MultiVendor
+    type: XLite\View\FormField\Input\Checkbox\OnOffWithoutOffLabel
+    orderby: 160
+    value: true
+    translations:
+      - code: en
+        option_name: 'Allow vendors to approve, reject and edit product ratings and reviews'
+      - code: ru
+        option_name: 'Разрешить вендорам одобрять, отклонять и редактировать оценки и отзывы о продуктах'
+  - name: mask_contacts
+    category: XC\MultiVendor
+    type: XLite\View\FormField\Input\Checkbox\OnOffWithoutOffLabel
+    orderby: 100
+    value: 1
+    translations:
+      - code: en
+        option_name: Do not show customers’ contact information to vendors
+      - code: ru
+        option_name: Скрывать для вендора информацию о покупателе
+  - name: default_role
+    category: XC\MultiVendor
+    type: XLite\Module\XC\MultiVendor\View\FormField\Select\DefaultVendorRole
+    orderby: 200
+    translations:
+      - code: en
+        option_name: Role to assign to new vendor users
+      - code: ru
+        option_name: Роль, назначаемая новым продавцам по умолчанию
+
+XLite\Model\Role\Permission:
+  - { code: "[vendor] manage catalog", section: Vendors, translations: [{ code: en, name: Manage vendor's catalog }, { code: ru, label: 'Управление каталогом продавца' }] }
+  - { code: "[vendor] manage orders", section: Vendors, translations: [{ code: en, name: Manage vendor's orders }, { code: ru, label: 'Управление заказами продавца' }] }
+  - { code: "[vendor] manage shipping", section: Vendors, translations: [{ code: en, name: Manage vendor's shipping settings }, { code: ru, label: 'Управление настройками доставки продавца' }] }
+
+XLite\Model\Role:
+  - { translations: [{ code: en, name: Vendor }, { code: ru, name: "Продавец" }], permissions: [{ code: "[vendor] manage catalog" }, { code: "[vendor] manage orders" }, { code: "[vendor] manage shipping" }] }
+
+XLite\Model\LanguageLabel:
+  - { name: "Vendors", translations: [{ code: en, label: "Vendors" }, { code: ru, label: "Продавцы" }] }
+  - { name: "Vendor", translations: [{ code: en, label: "Vendor" }, { code: ru, label: "Продавец" }] }
+  - { name: "Any vendor", translations: [{ code: en, label: "Any vendor" }, { code: ru, label: "Любой продавец" }] }
+  - { name: "No vendor", translations: [{ code: en, label: "No vendor" }, { code: ru, label: "Продавец не назначен" }] }
+  - { name: "Main vendor", translations: [{ code: en, label: "Main vendor" }, { code: ru, label: "Основной продавец" }] }
+  - { name: "Vendor information", translations: [{ code: en, label: "Vendor information" }, { code: ru, label: "Информация о продавце" }] }
+  - { name: "My vendor backend", translations: [{ code: en, label: "My vendor backend" }, { code: ru, label: "Бэкенд продавца" }] }
+  - { name: "About vendor", translations: [{ code: en, label: "About vendor" }, { code: ru, label: "О продавце" }] }
+  - { name: "Per vendor shipping costs", translations: [{ code: en, label: "Per vendor shipping costs" }, { code: ru, label: "Стоимость доставки по продавцам" }] }
+  - { name: "Your cart contains products from different vendors", translations: [{ code: en, label: "Your cart contains products from different vendors and they cannot be shipped together. Please try to buy them separately:" }, { code: ru, label: "Ваша корзина содержит товары от разных продавцов и они не могут быть отправлены вместе. Пожалуйста, добавьте эти товары в корзину по отдельности:" }] }
+  - { name: "Email or Company name", translations: [{ code: en, label: "Email or Company name" }, { code: ru, label: "Email или Название компании" }] }
+  - { name: "Thank you for creating a vendor account at company", translations: [{ code: en, label: "Thank you for creating a vendor account at {{company}}." }, { code: ru, label: "Вы зарегистрировали аккаунт продавца в компании {{company}}." }] }
+  - { name: "Once your account is approved by administrator, you will be able to log in and start selling.", translations: [{ code: en, label: "Once your account is approved by administrator, you will be able to log in and start selling." }, { code: ru, label: "После того, как администратор подтвердит ваш аккаунт, вы сможете войти в систему и начать продавать." }] }
+  - { name: "Vendor account created", translations: [{ code: en, label: "Vendor account created" }, { code: ru, label: "Зарегистрирован аккаунт продавца" }] }
+  - { name: "A new vendor account has been created and is awaiting approval:", translations: [{ code: en, label: "A new vendor account has been created and is awaiting approval:" }, { code: ru, label: "Зарегистрирован и ожидает подтверждения новый аккаунт продавца:" }] }
+  - { name: "Thank you for creating a vendor account. Once your account is approved by administrator, you will be able to log in and start selling.", translations: [{ code: en, label: "Thank you for creating a vendor account. Once your account is approved by administrator, you will be able to log in and start selling." }, { code: ru, label: "Спасибо за регистрацию! После подтверждения аккаунта администратором вы сможете войти в систему и начать продавать." }] }
+  - { name: "Your vendor account has been approved", translations: [{ code: en, label: "Your vendor account has been approved" }, { code: ru, label: "Ваш аккаунт продавца подтвержден" }] }
+  - { name: "Your vendor account at company is approved", translations: [{ code: en, label: "Your vendor account at {{company}} has been approved." }, { code: ru, label: "Ваш аккаунт продавца подтвержден администратором." }] }
+  - { name: "Now you can log in at our site and start selling products.", translations: [{ code: en, label: 'Now you can log in at <a href="{{url}}">our site</a> and start selling products.' }, { code: ru, label: 'Теперь вы можете <a href="{{url}}">авторизоваться</a> на нашем сайте и начать продавать ващи товары.' }] }
+  - { name: "Your vendor account was declined", translations: [{ code: en, label: "Your vendor account has been declined." }, { code: ru, label: "Ваш аккаунт продавца отклонен" }] }
+  - { name: "Your vendor account at company was declined", translations: [{ code: en, label: "Your vendor account at {{company}} has been declined." }, { code: ru, label: "Ваш аккаунт продавца был отклонен администратором." }] }
+  - { name: "Vendor account has been successfully approved.", translations: [{ code: en, label: "Vendor account has been successfully approved." }, { code: ru, label: "Аккаунт продавца успешно подтвержден." }] }
+  - { name: "Vendor account has been declined.", translations: [{ code: en, label: "Vendor account has been declined." }, { code: ru, label: "Аккаунт продавца отклонен." }] }
+  - { name: "Approve vendor", translations: [{ code: en, label: "Approve vendor" }, { code: ru, label: "Подтвердить" }] }
+  - { name: "Decline vendor", translations: [{ code: en, label: "Decline vendor" }, { code: ru, label: "Отклонить" }] }
+  - { name: "Visit this page to approve or decline vendor account.", translations: [{ code: en, label: 'Visit <a href="{{url}}">this page</a> to approve or decline vendor account.' }, { code: ru, label: 'Перейдите на <a href="{{url}}">эту страницу</a>, чтобы подтвердить или отклонить аккаунт продавца.' }] }
+  - { name: 'My Settings', translations: [{ code: en, label: 'My Settings' }] }
+  - { name: 'View Profile', translations: [{ code: en, label: 'View Profile' }] }
+  - { name: 'Enter decline reason here', translations: [{ code: en, label: 'Enter decline reason here' }] }
+  - { name: 'Reason:', translations: [{ code: en, label: 'Reason:' }] }
+  - { name: 'Your vendor account is approved', translations: [{ code: en, label: 'Your vendor account has been approved' }] }
+  - { name: 'Unapproved vendor', translations: [{ code: en, label: 'Unapproved vendor' }, { code: ru, label: "Неподтвержденный продавец" }] }
+  - { name: 'Use existing values only', translations: [{ code: en, label: 'Use existing values only' },{ code: ru, label: "Может использовать только уже существующие значения" }] }
+  - { name: 'Use existing and add new values', translations: [{ code: en, label: 'use existing and add new values' },{ code: ru, label: "Может использовать существующие значения и добавлять новые" }] }
+  - { name: 'View attributes', translations: [{ code: en, label: 'View attributes' }] }
+  - { name: 'Thank you for registered a vendor account. After administrator approval you will be able to login and start to sell.', translations: [{ code: en, label: 'Thank you for registering a vendor account. After administrator approval you will be able to login and start selling.' }] }
+  - { name: 'View attribute values', translations: [{ code: en, label: 'View attribute values' }] }
+  - { name: 'Unapproved vendors', translations: [{ code: en, label: 'Unapproved vendors' }, { code: ru, label: "Неподтвержденные продавцы" }] }  
+  - { name: 'To accept online payments, you need a PayPal account', translations: [{ code: en, label: 'To accept online payments, you need a PayPal account' }, { code: ru, label: 'Для приема онлайн платежей Вам потребуется аккаунт PayPal' }] }
+  - { name: 'Use your [existing PayPal account] or [create a new one].', translations: [{ code: en, label: 'Use your <a href="{{financialTabURL}}">existing PayPal account</a> or <a href="{{externalCreateURL}}" target="_blank">create a new one</a>.' }, { code: ru, label: 'Используйте Ваш <a href="{{financialTabURL}}">существующий аккаунт PayPal</a> или <a href="{{externalCreateURL}}" target="_blank">создайте новый</a>.' }] }
+  - { name: 'Note that PayPal services may not be available in some countries. If your country is not supported by PayPal, we can collect payments for you on our own account and withdraw the money at your request.', translations: [{ code: en, label: 'Note that PayPal services may not be available in some countries. If your country is not supported by PayPal, we can collect payments for you on our own account and withdraw the money at your request.' }, { code: ru, label: 'Примечание: Услуги PayPal могут быть недоступны в некоторых странах. Если Ваша страна не входит в список стран, обслуживаемых PayPal, мы можем принимать платежи от Вашего имени через свой счет и осуществлять вывод средств по Вашему запросу.'}] }
+  - { name: 'Select the vendor profile to add a transaction', translations: [{ code: en, label: 'Select the vendor profile to add a transaction' }, { code: ru, label: "Выберите профиль продавца, чтобы создать транзакцию" }] }
+  - { name: 'Account exists but is not verified', translations: [{ code: en, label: 'Account exists but is not verified' }, { code: ru, label: "Аккаунт существует, но не верифицирован" }] }
+  - { name: 'Account exists and is verified', translations: [{ code: en, label: 'Account exists and is verified' }, { code: ru, label: "Аккаунт существует и верифицирован" }] }
+  - { name: 'Account status info unavailable', translations: [{ code: en, label: 'Account status info unavailable' }, { code: ru, label: "Сведения о статусе аккаунта недоступны" }] }
+  - { name: 'Vendor Income', translations: [{ code: en, label: 'Vendor Income' }, {code: ru, label:'Поступления продавцу'}] }
+  - { name: 'Auto', translations: [{ code: en, label: 'Auto' }, {code: ru, label:'Авто'}] }
+  - { name: 'Order paid', translations: [{ code: en, label: 'Order paid' }, {code: ru, label:'Заказ оплачен'}] }
+  - { name: 'Order canceled', translations: [{ code: en, label: 'Order canceled' }, {code: ru, label:'Заказ отменен'}] }
+  - { name: 'Income', translations: [{ code: en, label: 'Income' }, {code: ru, label:'Доход'}] }
+  - { name: 'Vendor products', translations: [{ code: en, label: 'Vendor products' }, {code: ru, label:'Продукты продавца'}] }
+  - { name: 'Earnings', translations: [{ code: en, label: 'Earnings' }, {code: ru, label:'Поступления'}] }
+  - { name: 'Commission', translations: [{ code: en, label: 'Commission' }, {code: ru, label:'Комиссия'}] }
+  - { name: 'Earnings total', translations: [{ code: en, label: 'Earnings total' }, {code: ru, label:'Итого поступлений'}] }
+  - { name: 'Commissions total', translations: [{ code: en, label: 'Commissions total' }, {code: ru, label:'Итого комиссии'}] }
+  - { name: 'Vendor Expense', translations: [{ code: en, label: 'Vendor Expense' } {code: ru, label:'Выплачено продавцу'}] }
+  - { name: 'Created by', translations: [{ code: en, label: 'Created by' } {code: ru, label:'Кем создана'}] }
+  - { name: 'Earning balance', translations: [{ code: en, label: 'Earning balance' } {code: ru, label:'Суммарный доход вендоров'}] }
+  - { name: 'Liability', translations: [{ code: en, label: 'Liability' } {code: ru, label:'Осталось выплатить продавцам'}] }
+  - { name: 'Vendors Income', translations: [{ code: en, label: 'Vendors Income' } {code: ru, label:'Суммарный доход продавцов'}] }
+  - { name: 'Vendors Expense', translations: [{ code: en, label: 'Vendors Expense' } {code: ru, label:'Выплачено продавцам'}] }
+  - { name: 'Expense', translations: [{ code: en, label: 'Expense' } {code: ru, label:'Расход'}] }
+  - { name: 'Vendor transactions', translations: [{ code: en, label: 'Vendor transactions' } {code: ru, label:'Платежные операции продавцов'}] }
+  - { name: 'Transactions history', translations: [{ code: en, label: 'Transactions history' } {code: ru, label:'История транзакций'}] }
+  - { name: 'Create transaction', translations: [{ code: en, label: 'Create transaction' } {code: ru, label:'Создать транзакцию'}] }
+  - { name: 'Find transactions', translations: [{ code: en, label: 'Find transactions' } {code: ru, label:'Найти транзакции'}] }
+  - { name: 'Enter description', translations: [{ code: en, label: 'Enter description' } {code: ru, label:'Введите описание'}] }
+  - { name: 'Vendor statistics', translations: [{ code: en, label: 'Vendor statistics' } {code: ru, label:'Статистика продавцов'}] }
+  - { name: 'Initial period balance', translations: [{ code: en, label: 'Initial period balance' } {code: ru, label:'Состояние на начало периода'}] }
+  - { name: 'Open transactions history', translations: [{ code: en, label: 'Open transactions history' } {code: ru, label:'Открыть историю транзакций'}] }
+  - { name: 'Value of transaction should not be empty', translations: [{ code: en, label: 'Value of transaction should not be empty' } {code: ru, label:'Значение транзакции не должно быть пустым'}] }
+  - { name: 'Warehouse', translations: [{ code: en, label: 'Warehouse' }, { code: ru, label: 'Склад'} ] }
+  - { name: 'Vendors as separate shops', translations: [{ code: en, label: 'Vendors as separate shops' }, { code: ru, label: 'Каждый вендор - отдельный продавец'} ] }
+  - { name: 'Related to orders:', translations: [{ code: en, label: 'Related to orders:' }, { code: ru, label: 'Относится к заказам:'} ] }
+  - { name: 'Store address', translations: [{ code: en, label: 'Store address' }, { code: ru, label: 'Адрес магазина'} ] }
+  - { name: 'The following vendors have no shipping methods available: vendors', translations: [{ code: en, label: 'The following vendors have no shipping methods available: {{vendors}}' }, { code: ru, label: 'Следующие продавцы не имеют доступных способов доставки: {{vendors}}'} ] }
+  - { name: 'Sorry, your order cannot be placed: Some of the sellers do not have a shipping method available', translations: [{ code: en, label: 'Sorry, your order cannot be placed: Some of the sellers whose products are in your cart do not have a shipping method available for your location. Please go back to the cart page, remove the products of the sellers that do not have an available shipping method and try again.' }, { code: ru, label: 'Извините, заказ не может быть размещен: Некоторые продавцы из тех, чьи продукты присутствуют в корзине, не имеют способов доставки для вашего адреса. Пожалуйста, вернитесь в корзину, удалите товары продавцов, не имеющих способов доставки, и попробуйте еще раз.'} ] }
+  - { name: 'Product vendor', translations: [{ code: en, label: 'Product vendor' } {code: ru, label:'Продавец товара'}] }
+  - { name: 'You can remove their products from cart to purchase the other products.', translations: [{ code: en, label: 'You can <a href={{url}}>remove their products from cart</a> to purchase the other products.' }, { code: ru, label: 'Вы можете <a href={{url}}>их товары из корзины</a> чтобы купить остальные товары.' }] }
+  - { name: 'https://www.paypal.com/webapps/mpp/home', translations: [{ code: en, label: 'https://www.paypal.com/webapps/mpp/home' }, { code: ru, label: 'https://www.paypal.com/ru/webapps/mpp/home' }] }
+  - { name: 'na_vendor', translations: [{ code: en, label: 'Vendor'}, {code: ru, label: 'Продавец'}] }
+  - { name: 'Log in as this vendor', translations: [{ code: en, label: 'Log in as this vendor'}, {code: ru, label: 'Войти как продавец'}] }
+  - { name: 'Vendor details', translations: [{ code: en, label: 'Vendor details'}, {code: ru, label: 'Информация о продавце'}] }
+  - { name: 'Financial info', translations: [{ code: en, label: 'Financial info'}, {code: ru, label: 'Финансовая информация'}] }
+  - { name: 'Location', translations: [{ code: en, label: 'Location'}, {code: ru, label: 'Местонахождение'}] }
+  - { name: 'PayPal account (email)', translations: [{ code: en, label: 'PayPal account (email)'}, {code: ru, label: 'Email адрес счета PayPal'}] }
+  - { name: 'Bank details', translations: [{ code: en, label: 'Bank details'}, {code: ru, label: 'Банковские реквизиты'}] }
+  - { name: 'There are orders with this product. The new vendor will not have access to these orders.', translations: [{ code: en, label: '<a href={{url}}>There are orders</a> with this product. The new vendor will not have access to these orders.'}, {code: ru, label: '<a href={{url}}>Эти заказы</a> содержат данный продукт. Новый продавец не будет иметь доступа к этим заказам.' }] }
+  - { name: 'You do not have access to this product, since it is being controlled by another vendor. Contact the administrator.', translations: [{ code: en, label: 'You do not have access to this product, since it is being controlled by another vendor. Contact the administrator.'}, {code: ru, label: 'У вас нет доступа к данному продукту, так как он контролируется другим продавцом. Свяжитесь с администратором.' }] }
+  - { name: 'Votes:', translations: [{ code: en, label: 'Votes:'}, { code: 'ru', label: 'Голосов:' }] }
+  - { name: 'Reviews module required', translations: [{ code: en, label: 'Reviews module required'}, { code: 'ru', label: 'Необходим модуль Reviews' }] }
+  - { name: 'Order DST based commission rate defined by', translations: [{ code: en, label: 'Order DST based commission rate defined by'}, {code: ru, label: 'Комиссия со стоимости товаров в заказе определяется'}] }
+  - { name: 'Order DST based commission rate of this vendor', translations: [{ code: en, label: 'Order DST based commission rate of this vendor'}, {code: ru, label: 'Комиссия со стоимости товаров в заказе данного продавца'}] }
+  - { name: 'Order shipping cost based commission rate defined by', translations: [{ code: en, label: 'Order shipping cost based commission rate defined by'}, {code: ru, label: 'Комиссия со стоимости доставки заказа определяется'}] }
+  - { name: 'Order shipping cost based commission rate of this vendor', translations: [{ code: en, label: 'Order shipping cost based commission rate of this vendor'}, {code: ru, label: 'Комиссия со стоимости доставки заказа данного продавца'}] }
+  - { name: 'Global rate', translations: [{ code: en, label: 'Global rate'}, {code: ru, label: 'Глобальной настройкой'}] }
+  - { name: 'For the vendor', translations: [{ code: en, label: 'For the vendor'}, {code: ru, label: 'От продавца'}] }
+  - { name: 'Special rate', translations: [{ code: en, label: 'Special rate'}, {code: ru, label: 'Специальным значением'}] }
+  - { name: 'sold by VendorName', translations: [{ code: en, label: 'sold by {{vendorName}}'}, {code: ru, label: 'продавец {{vendorName}}'}] }
+
+  - { name: 'Sign in notification', translations: [{ code: en, label: 'Sign in notification' }]}
+  - { name: 'Sorry, the products in your cart cannot be shipped to your location.', translations: [{ code: en, label: 'Sorry, the products in your cart cannot be shipped to your location.' }]}
+  - { name: 'Vendor name', translations: [{ code: en, label: 'Vendor name' }]}
+  - { name: 'Product with SKU "{{value}}" not found or vendor mismatch', translations: [{ code: en, label: 'Product with SKU "{{value}}" not found, or vendor does not match the user currently logged in' }, { code: ru, label: 'Товар с артикулом "{{value}}" не найден, либо продавец товара не соответствует текущему авторизованному пользователю' }]}
+  - { name: 'Product or product variant with SKU "{{value}}" not found or vendor mismatch', translations: [{ code: en, label: 'Product or product variant with SKU "{{value}}" not found, or vendor does not match the user currently logged in' }, { code: ru, label: 'Товар или вариант товара с артикулом "{{value}}" не найдены, либо продавец товара не соответствует текущему авторизованному пользователю' }]}
+  - { name: 'Cannot determine PayPal Account status', translations: [{ code: en, label: 'Cannot determine PayPal Account status' }, { code: ru, label: "Статус аккаунта Paypal не может быть определен" }] }
+  - { name: 'Paypal login {{value}} already registered', translations: [{ code: en, label: 'Paypal login {{value}} already registered' }, { code: ru, label: 'Paypal аккаунт {{value}} уже зарегистрирован'}] }
+  - { name: '(default vendor role)', translations: [{ code: en, label: '(default vendor role)' }, { code: ru, label: '(роль продавца по умолчанию)'}] }
+  - { name: 'Wrong vendor format', translations: [{ code: en, label: 'Wrong format of "vendor" field' }, { code: ru, label: 'Неправильный формат поля "vendor"'}] }
+  - { name: 'Wrong child order number format', translations: [{ code: en, label: 'Wrong format of "children" field' }, { code: ru, label: 'Неправильный формат поля "children"'}] }
+  - { name: 'Wrong parent order number format', translations: [{ code: en, label: 'Wrong format of "parent" field' }, { code: ru, label: 'Неправильный формат поля "parent"'}] }
+
+
+XLite\Model\Notification:
+  - templatesDirectory: modules/XC/MultiVendor/order_advanced_changed
+    availableForAdmin: true
+    availableForCustomer: false
+    enabledForAdmin: true
+    enabledForCustomer: false
+    adminHeaderEnabled: true
+    adminGreetingEnabled: false
+    adminSignatureEnabled: true
+    customerHeaderEnabled: true
+    customerGreetingEnabled: true
+    customerSignatureEnabled: true
+    translations:
+      - code: en
+        name: Order changed with advanced order management (for vendor)
+        description: This message is sent to notify the vendor of any changes made to their order by an administrator using the advanced order management feature.
+        adminSubject: Order has been changed
+        adminText: Order has been changed.
+      - code: ru
+        name: Заказ изменен с помощью продвинутого редактирования заказов (для продавца)
+        description: Данное уведомление используется для оповещения продавца об изменениях, внесенных в его заказ администратором с помощью функциональности продвинутого редактирования заказов.
+        adminSubject: Заказ изменен
+        adminText: Заказ был изменен.
+  - templatesDirectory: modules/XC/MultiVendor/order_canceled
+    availableForAdmin: true
+    availableForCustomer: false
+    enabledForAdmin: true
+    enabledForCustomer: false
+    adminHeaderEnabled: true
+    adminGreetingEnabled: false
+    adminSignatureEnabled: true
+    customerHeaderEnabled: true
+    customerGreetingEnabled: true
+    customerSignatureEnabled: true
+    translations:
+      - code: en
+        name: Order canceled (for vendor)
+        description: This notification is sent to the vendor when an order gets the status Canceled.
+        adminSubject: Order has been canceled
+        adminText: Order has been canceled.
+      - code: ru
+        name: Заказ отменен (для продавца)
+        description: Данное сообщение отправляется продавцу, когда заказ получает статус "Заказ отменен".
+        adminSubject: Заказ отменен
+        adminText: Заказ был отменен.
+  - templatesDirectory: modules/XC/MultiVendor/order_changed
+    availableForAdmin: true
+    availableForCustomer: false
+    enabledForAdmin: true
+    enabledForCustomer: false
+    adminHeaderEnabled: true
+    adminGreetingEnabled: false
+    adminSignatureEnabled: true
+    customerHeaderEnabled: true
+    customerGreetingEnabled: true
+    customerSignatureEnabled: true
+    translations:
+      - code: en
+        name: Order changed (for vendor)
+        description: This notification is sent to the vendor when the status of an order is updated - in the event that no other type of notification is sent.
+        adminSubject: Order has been changed
+        adminText: Order has been changed.
+      - code: ru
+        name: Заказ изменен (для продавца)
+        description: Данное сообщение отправляется продавцу при изменениии статуса заказа в случае, если не отправляются иные нотификации.
+        adminSubject: Заказ изменен
+        adminText: Заказ был изменен.
+  - templatesDirectory: modules/XC/MultiVendor/order_created
+    availableForAdmin: true
+    availableForCustomer: false
+    enabledForAdmin: true
+    enabledForCustomer: false
+    adminHeaderEnabled: true
+    adminGreetingEnabled: false
+    adminSignatureEnabled: true
+    customerHeaderEnabled: true
+    customerGreetingEnabled: true
+    customerSignatureEnabled: true
+    translations:
+      - code: en
+        name: Order created (for vendor)
+        description: This notification is sent to the vendor when a new order is created (Disabled by default).
+        adminSubject: Order has been created
+        adminText: Order has been created.
+      - code: ru
+        name: Заказ создан (для продавца)
+        description: Данное сообщение отправляется продавцу при создании нового заказа (По умолчанию отключено).
+        adminSubject: Заказ создан
+        adminText: Заказ был создан.
+  - templatesDirectory: modules/XC/MultiVendor/order_failed
+    availableForAdmin: true
+    availableForCustomer: false
+    enabledForAdmin: true
+    enabledForCustomer: false
+    adminHeaderEnabled: true
+    adminGreetingEnabled: false
+    adminSignatureEnabled: true
+    customerHeaderEnabled: true
+    customerGreetingEnabled: true
+    customerSignatureEnabled: true
+    translations:
+      - code: en
+        name: Order failed (for vendor)
+        description: This notification is sent to both the administrator and customer when an order gets the status Declined.
+        adminSubject: Order has been declined
+        adminText: Order has been declined.
+      - code: ru
+        name: Заказ отклонен (для продавца)
+        description: Данное сообщение отправляется продавцу, когда заказ получает статус "Платёж не принят".
+        adminSubject: Заказ отклонен
+        adminText: Заказ был отклонен.
+  - templatesDirectory: modules/XC/MultiVendor/order_processed
+    availableForAdmin: true
+    availableForCustomer: false
+    enabledForAdmin: true
+    enabledForCustomer: false
+    adminHeaderEnabled: true
+    adminGreetingEnabled: false
+    adminSignatureEnabled: true
+    customerHeaderEnabled: true
+    customerGreetingEnabled: true
+    customerSignatureEnabled: true
+    translations:
+      - code: en
+        name: Order processed (for vendor)
+        description: This notification is sent to the vendor when an order gets the status Paid.
+        adminSubject: Order has been processed
+        adminText: Order has been processed.
+      - code: ru
+        name: Заказ оплачен (для продавца)
+        description: Данное сообщение отправляется продавцу, когда заказ получает статус "Оплачен".
+        adminSubject: Заказ оплачен
+        adminText: Заказ был оплачен.
+  - templatesDirectory: modules/XC/MultiVendor/vendor_signin_notification
+    availableForAdmin: true
+    availableForCustomer: true
+    enabledForAdmin: true
+    enabledForCustomer: true
+    adminHeaderEnabled: true
+    adminGreetingEnabled: true
+    adminSignatureEnabled: true
+    customerHeaderEnabled: true
+    customerGreetingEnabled: true
+    customerSignatureEnabled: true
+    translations:
+      - code: en
+        name: Vendor account created
+        description: This notification is sent when a new vendor account is created
+        customerSubject: Welcome!
+        customerText: ''
+        adminSubject: Vendor account created
+        adminText: ''
+      - code: ru
+        name: Создание учетной записи вендора
+        description: Данное уведомление отправляется, когда создается новый аккаунт вендора
+        customerSubject: Добро пожаловать!
+        customerText: ''
+        adminSubject: Зарегистрирован аккаунт продавца
+        adminText: ''
+  - templatesDirectory: modules/XC/MultiVendor/vendor_approved_notification
+    availableForAdmin: false
+    availableForCustomer: true
+    enabledForAdmin: false
+    enabledForCustomer: true
+    adminHeaderEnabled: false
+    adminGreetingEnabled: false
+    adminSignatureEnabled: false
+    customerHeaderEnabled: true
+    customerGreetingEnabled: true
+    customerSignatureEnabled: true
+    translations:
+      - code: en
+        name: Vendor account approved
+        description: This notification is sent after a new vendor account is approved by the store administrator
+        customerSubject: Your vendor account has been approved
+        customerText: ''
+      - code: ru
+        name: Учетная запись вендора подтверждена
+        description: Данное уведомление отправляется после подтверждения аккаунта вендора администратором
+        customerSubject: Ваш аккаунт продавца подтвержден
+        customerText: ''
+  - templatesDirectory: modules/XC/MultiVendor/vendor_declined_notification
+    availableForAdmin: false
+    availableForCustomer: true
+    enabledForAdmin: false
+    enabledForCustomer: true
+    adminHeaderEnabled: false
+    adminGreetingEnabled: false
+    adminSignatureEnabled: false
+    customerHeaderEnabled: true
+    customerGreetingEnabled: true
+    customerSignatureEnabled: true
+    translations:
+      - code: en
+        name: Vendor account rejected
+        description: This notification is sent after a new vendor account is rejected by the store administrator
+        customerSubject: Your vendor account was declined
+        customerText: ''
+      - code: ru
+        name: Учетная запись вендора отклонена
+        description: Данное уведомление отправляется, если аккаунт вендора был отклонен администратором
+        customerSubject: Ваш аккаунт продавца отклонен
+        customerText: ''

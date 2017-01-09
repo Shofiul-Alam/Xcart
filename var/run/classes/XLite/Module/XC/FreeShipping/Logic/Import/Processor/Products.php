@@ -12,7 +12,7 @@ namespace XLite\Module\XC\FreeShipping\Logic\Import\Processor;
 /**
  * Decorate import processor
  */
- class Products extends \XLite\Module\XC\Upselling\Logic\Import\Processor\Products implements \XLite\Base\IDecorator
+ class Products extends \XLite\Module\XC\MultiVendor\Logic\Import\Processor\Products implements \XLite\Base\IDecorator
 {
     // {{{ Columns
 

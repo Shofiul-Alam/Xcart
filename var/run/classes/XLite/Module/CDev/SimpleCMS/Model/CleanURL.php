@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\SimpleCMS\Model;
 /**
  * CleanURL
  */
- class CleanURL extends \XLite\Module\XC\News\Model\CleanURL implements \XLite\Base\IDecorator
+ class CleanURL extends \XLite\Module\XC\MultiVendor\Model\CleanURL implements \XLite\Base\IDecorator
 {
     /**
      * Relation to a product entity

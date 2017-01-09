@@ -13,7 +13,7 @@ namespace XLite\Module\XC\FreeShipping\View\Model;
  *
  * @Decorator\Depend("CDev\Coupons")
  */
- class Coupon extends \XLite\Module\CDev\Coupons\View\Model\CouponAbstract implements \XLite\Base\IDecorator
+ class Coupon extends \XLite\Module\XC\MultiVendor\Module\CDev\Coupons\View\Model\Coupon implements \XLite\Base\IDecorator
 {
     /**
      * Return fields list by the corresponding schema

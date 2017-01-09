@@ -94,10 +94,10 @@ class OrderItem extends \XLite\Model\OrderItem implements \Doctrine\ORM\Proxy\Pr
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', 'categoryAdded', 'shippingCost', 'xpcFakeItem', 'capostParcelItems', 'capostReturnItems', 'item_id', 'object', 'name', 'sku', 'price', 'itemNetPrice', 'discountedSubtotal', 'amount', 'order', 'surcharges', 'dumpProduct', 'attributeValues', 'total', 'subtotal', '_previous_state');
+            return array('__isInitialized__', 'categoryAdded', 'shippingCost', 'xpcFakeItem', 'capostParcelItems', 'capostReturnItems', 'vendor', 'originalProduct', 'item_id', 'object', 'name', 'sku', 'price', 'itemNetPrice', 'discountedSubtotal', 'amount', 'order', 'surcharges', 'dumpProduct', 'attributeValues', 'total', 'subtotal', '_previous_state');
         }
 
-        return array('__isInitialized__', 'categoryAdded', 'shippingCost', 'xpcFakeItem', 'capostParcelItems', 'capostReturnItems', 'item_id', 'object', 'name', 'sku', 'price', 'itemNetPrice', 'discountedSubtotal', 'amount', 'order', 'surcharges', 'dumpProduct', 'attributeValues', 'total', 'subtotal', '_previous_state');
+        return array('__isInitialized__', 'categoryAdded', 'shippingCost', 'xpcFakeItem', 'capostParcelItems', 'capostReturnItems', 'vendor', 'originalProduct', 'item_id', 'object', 'name', 'sku', 'price', 'itemNetPrice', 'discountedSubtotal', 'amount', 'order', 'surcharges', 'dumpProduct', 'attributeValues', 'total', 'subtotal', '_previous_state');
     }
 
     /**
@@ -426,6 +426,72 @@ class OrderItem extends \XLite\Model\OrderItem implements \Doctrine\ORM\Proxy\Pr
     /**
      * {@inheritDoc}
      */
+    public function isOfCurrentVendor()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isOfCurrentVendor', array());
+
+        return parent::isOfCurrentVendor();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getURL()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getURL', array());
+
+        return parent::getURL();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setVendor(\XLite\Model\Profile $vendor = NULL)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVendor', array($vendor));
+
+        return parent::setVendor($vendor);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getVendor()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVendor', array());
+
+        return parent::getVendor();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setOriginalProduct(\XLite\Model\Product $originalProduct = NULL)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setOriginalProduct', array($originalProduct));
+
+        return parent::setOriginalProduct($originalProduct);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getOriginalProduct()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getOriginalProduct', array());
+
+        return parent::getOriginalProduct();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function getName()
     {
 
@@ -663,17 +729,6 @@ class OrderItem extends \XLite\Model\OrderItem implements \Doctrine\ORM\Proxy\Pr
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getProductAvailableAmount', array());
 
         return parent::getProductAvailableAmount();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getURL()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getURL', array());
-
-        return parent::getURL();
     }
 
     /**

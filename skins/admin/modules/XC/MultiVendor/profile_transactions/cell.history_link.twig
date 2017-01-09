@@ -1,0 +1,9 @@
+{##
+ # Profile cell
+ #}
+
+<div class="history-box">
+    {% if not this.isProfileRemoved(this.entity) %}
+        <a href='{{ url('profile_transactions', 'search', {'profile': this.getOwnerVendorProfileId(this.entity)}) }}'>{{ t('Open transactions history') }}</a>
+    {% endif %}
+</div>

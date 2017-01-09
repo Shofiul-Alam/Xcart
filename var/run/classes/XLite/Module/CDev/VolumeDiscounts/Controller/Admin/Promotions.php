@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\VolumeDiscounts\Controller\Admin;
 /**
  * Volume discounts page controller (Promotion section)
  */
- class Promotions extends \XLite\Module\QSL\CloudSearch\Controller\Admin\Promotions implements \XLite\Base\IDecorator
+ class Promotions extends \XLite\Controller\Admin\PromotionsAbstract implements \XLite\Base\IDecorator
 {
     /**
      * Page key

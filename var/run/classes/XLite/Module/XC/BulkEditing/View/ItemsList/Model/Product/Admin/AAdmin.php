@@ -8,7 +8,7 @@
 
 namespace XLite\Module\XC\BulkEditing\View\ItemsList\Model\Product\Admin;
 
-abstract class AAdmin extends \XLite\View\ItemsList\Model\Product\Admin\AAdminAbstract implements \XLite\Base\IDecorator
+abstract class AAdmin extends \XLite\Module\XC\MultiVendor\View\ItemsList\Model\Product\Admin\AAdmin implements \XLite\Base\IDecorator
 {
     /**
      * @return array

@@ -11,7 +11,7 @@ namespace XLite\Module\XC\Reviews\Core;
 /**
  * Layout
  */
- class Layout extends \XLite\Module\XC\Sitemap\Core\Layout implements \XLite\Base\IDecorator
+ class Layout extends \XLite\Module\XC\ThemeTweaker\Core\Layout implements \XLite\Base\IDecorator
 {
     /**
      * Define the pages where first sidebar will be hidden.

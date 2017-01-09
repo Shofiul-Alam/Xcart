@@ -8,7 +8,7 @@
 
 namespace XLite\Module\XC\BulkEditing\View\FormModel;
 
- class FormGenerator extends \XLite\View\FormModel\FormGeneratorAbstract implements \XLite\Base\IDecorator
+ class FormGenerator extends \XLite\Module\XC\MultiVendor\View\FormModel\FormGenerator implements \XLite\Base\IDecorator
 {
     /**
      * @return array

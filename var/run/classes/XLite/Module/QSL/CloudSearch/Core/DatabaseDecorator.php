@@ -11,7 +11,7 @@ namespace XLite\Module\QSL\CloudSearch\Core;
 /**
  * Database
  */
-abstract class DatabaseDecorator extends \XLite\Module\XC\ThemeTweaker\Core\Database implements \XLite\Base\IDecorator
+abstract class DatabaseDecorator extends \XLite\Module\XC\MultiVendor\Core\Database implements \XLite\Base\IDecorator
 {
     /**
      * Start Doctrine entity manager

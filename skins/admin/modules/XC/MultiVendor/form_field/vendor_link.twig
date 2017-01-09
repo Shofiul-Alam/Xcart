@@ -1,0 +1,8 @@
+{##
+ # Vendor link field template
+ #}
+{% if this.getValue() %}
+    <a href="{{ this.getVendorProfileUrl() }}">{{ this.getVendorLinkTitle() }}</a>
+{% else %}
+    <span>{{ t('Administrator') }}</span>
+{% endif %}

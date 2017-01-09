@@ -11,7 +11,7 @@ namespace XLite\Module\XC\FreeShipping\View;
 /**
  * Cart
  */
- class Cart extends \XLite\View\CartAbstract implements \XLite\Base\IDecorator
+ class Cart extends \XLite\Module\XC\MultiVendor\Module\CDev\Coupons\View\Cart implements \XLite\Base\IDecorator
 {
     /**
      * Get CSS files

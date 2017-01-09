@@ -6,4 +6,4 @@ namespace XLite\Module\CDev\Sale\View;
  * @ListChild (list="sidebar.single", zone="customer", weight="170")
  * @ListChild (list="sidebar.first", zone="customer", weight="130")
  */
-class SaleBlock extends \XLite\Module\XC\NextPreviousProduct\View\SaleBlock {}
+class SaleBlock extends \XLite\Module\CDev\Sale\Module\XC\ThemeTweaker\View\SaleBlock {}

@@ -94,10 +94,10 @@ class OrderTrackingNumber extends \XLite\Model\OrderTrackingNumber implements \D
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', 'tracking_id', 'value', 'order', '_previous_state');
+            return array('__isInitialized__', 'vendor', 'tracking_id', 'value', 'order', '_previous_state');
         }
 
-        return array('__isInitialized__', 'tracking_id', 'value', 'order', '_previous_state');
+        return array('__isInitialized__', 'vendor', 'tracking_id', 'value', 'order', '_previous_state');
     }
 
     /**
@@ -203,6 +203,39 @@ class OrderTrackingNumber extends \XLite\Model\OrderTrackingNumber implements \D
     }
 
     
+    /**
+     * {@inheritDoc}
+     */
+    public function isOfCurrentVendor()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isOfCurrentVendor', array());
+
+        return parent::isOfCurrentVendor();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setVendor(\XLite\Model\Profile $vendor = NULL)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVendor', array($vendor));
+
+        return parent::setVendor($vendor);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getVendor()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVendor', array());
+
+        return parent::getVendor();
+    }
+
     /**
      * {@inheritDoc}
      */

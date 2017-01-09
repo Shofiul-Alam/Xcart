@@ -1,0 +1,7 @@
+
+{% if this.hasOrders() %}
+  <span class="orders-present" v-bind:class="{{ '{' }}'hidden':!isVendorEdited(){{ '}' }}">
+    <i class="fa fa-exclamation-triangle"></i>
+    {{ this.getOrdersMessage()|raw }}
+  </span>
+{% endif %}

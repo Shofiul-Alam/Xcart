@@ -94,10 +94,10 @@ class Surcharge extends \XLite\Model\Order\Surcharge implements \Doctrine\ORM\Pr
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', 'owner', 'id', 'type', 'code', 'class', 'include', 'available', 'value', 'name', 'weight', '_previous_state');
+            return array('__isInitialized__', 'vendor', 'owner', 'id', 'type', 'code', 'class', 'include', 'available', 'value', 'name', 'weight', '_previous_state');
         }
 
-        return array('__isInitialized__', 'owner', 'id', 'type', 'code', 'class', 'include', 'available', 'value', 'name', 'weight', '_previous_state');
+        return array('__isInitialized__', 'vendor', 'owner', 'id', 'type', 'code', 'class', 'include', 'available', 'value', 'name', 'weight', '_previous_state');
     }
 
     /**
@@ -203,6 +203,28 @@ class Surcharge extends \XLite\Model\Order\Surcharge implements \Doctrine\ORM\Pr
     }
 
     
+    /**
+     * {@inheritDoc}
+     */
+    public function setVendor(\XLite\Model\Profile $vendor = NULL)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVendor', array($vendor));
+
+        return parent::setVendor($vendor);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getVendor()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVendor', array());
+
+        return parent::getVendor();
+    }
+
     /**
      * {@inheritDoc}
      */

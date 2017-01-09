@@ -94,10 +94,10 @@ class Category extends \XLite\Model\Category implements \Doctrine\ORM\Proxy\Prox
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', 'coupons', 'featuredProducts', 'ogMeta', 'useCustomOG', 'productClasses', 'useClasses', 'category_id', 'lpos', 'rpos', 'enabled', 'show_title', 'depth', 'pos', 'root_category_look', 'quickFlags', 'memberships', 'image', 'banner', 'categoryProducts', 'children', 'parent', 'flagVisible', 'cleanURLs', 'metaDescType', 'xcPendingExport', 'lastUsage', 'editLanguage', 'translations', '_previous_state');
+            return array('__isInitialized__', 'coupons', 'featuredProducts', 'ogMeta', 'useCustomOG', 'category_id', 'lpos', 'rpos', 'enabled', 'show_title', 'depth', 'pos', 'root_category_look', 'quickFlags', 'memberships', 'image', 'banner', 'categoryProducts', 'children', 'parent', 'flagVisible', 'cleanURLs', 'metaDescType', 'xcPendingExport', 'lastUsage', 'editLanguage', 'translations', '_previous_state');
         }
 
-        return array('__isInitialized__', 'coupons', 'featuredProducts', 'ogMeta', 'useCustomOG', 'productClasses', 'useClasses', 'category_id', 'lpos', 'rpos', 'enabled', 'show_title', 'depth', 'pos', 'root_category_look', 'quickFlags', 'memberships', 'image', 'banner', 'categoryProducts', 'children', 'parent', 'flagVisible', 'cleanURLs', 'metaDescType', 'xcPendingExport', 'lastUsage', 'editLanguage', 'translations', '_previous_state');
+        return array('__isInitialized__', 'coupons', 'featuredProducts', 'ogMeta', 'useCustomOG', 'category_id', 'lpos', 'rpos', 'enabled', 'show_title', 'depth', 'pos', 'root_category_look', 'quickFlags', 'memberships', 'image', 'banner', 'categoryProducts', 'children', 'parent', 'flagVisible', 'cleanURLs', 'metaDescType', 'xcPendingExport', 'lastUsage', 'editLanguage', 'translations', '_previous_state');
     }
 
     /**
@@ -311,72 +311,6 @@ class Category extends \XLite\Model\Category implements \Doctrine\ORM\Proxy\Prox
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUseCustomOG', array());
 
         return parent::getUseCustomOG();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setStatus($value)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setStatus', array($value));
-
-        return parent::setStatus($value);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getAttributeOptionsByAttribute(\XLite\Model\Attribute $attribute)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getAttributeOptionsByAttribute', array($attribute));
-
-        return parent::getAttributeOptionsByAttribute($attribute);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setUseClasses($useClasses)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUseClasses', array($useClasses));
-
-        return parent::setUseClasses($useClasses);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getUseClasses()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUseClasses', array());
-
-        return parent::getUseClasses();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function addProductClasses(\XLite\Model\ProductClass $productClasses)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addProductClasses', array($productClasses));
-
-        return parent::addProductClasses($productClasses);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getProductClasses()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getProductClasses', array());
-
-        return parent::getProductClasses();
     }
 
     /**

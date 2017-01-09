@@ -1,0 +1,12 @@
+{##
+ # Vendor company name
+ #
+ # @ListChild (list="product.vendor_info", weight="30")
+ # @ListChild (list="sidebar.first.vendor_info", weight="30")
+ #}
+
+{% if this.vendor.getVendorLocation() %}
+  <div class="vendor-location">
+      <span>{{ this.vendor.getVendorLocation() }}</span>
+  </div>
+{% endif %}

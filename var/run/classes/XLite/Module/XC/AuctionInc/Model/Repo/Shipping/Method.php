@@ -11,7 +11,7 @@ namespace XLite\Module\XC\AuctionInc\Model\Repo\Shipping;
 /**
  * Shipping method model
  */
- class Method extends \XLite\Model\Repo\Shipping\MethodAbstract implements \XLite\Base\IDecorator
+ class Method extends \XLite\Module\XC\MultiVendor\Model\Repo\Shipping\Method implements \XLite\Base\IDecorator
 {
     /**
      * Search parameters

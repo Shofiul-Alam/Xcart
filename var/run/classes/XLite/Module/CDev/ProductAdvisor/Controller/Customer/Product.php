@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\ProductAdvisor\Controller\Customer;
 /**
  * Product page controller extension
  */
- class Product extends \XLite\Controller\Customer\ProductAbstract implements \XLite\Base\IDecorator
+ class Product extends \XLite\Module\XC\MultiVendor\Controller\Customer\Product implements \XLite\Base\IDecorator
 {
     /**
      * Save requested product ID in the recently viewed statistics

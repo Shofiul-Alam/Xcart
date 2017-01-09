@@ -6,4 +6,4 @@ namespace XLite\Model;
  * @Entity
  * @Table  (name="attributes")
  */
-class Attribute extends \XLite\Module\XC\ProductFilter\Model\Attribute {}
+class Attribute extends \XLite\Module\XC\MultiVendor\Model\Attribute {}

@@ -1,0 +1,4 @@
+Version 5.3.1.1
+
+Fixes
+2016-08-16 - [Bug] The phone field was not hidden from the invoice sent via email notification to vendor when the setting "Do not show customers’ contact information to vendors" was enabled. Fixed. #BUG-3724 (Michael Lipinski) #MultiVendor

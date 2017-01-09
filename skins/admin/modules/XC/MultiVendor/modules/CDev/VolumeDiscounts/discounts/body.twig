@@ -1,0 +1,9 @@
+{##
+ # VolumeDiscounts list
+ #}
+
+{% if this.isVolumeDiscountSearchVisible() %}
+  {{ widget('\\XLite\\Module\\XC\\MultiVendor\\Module\\CDev\\VolumeDiscounts\\View\\SearchPanel\\VolumeDiscount') }}
+{% endif %}
+
+{% include 'modules/CDev/VolumeDiscounts/discounts/body.twig' %}

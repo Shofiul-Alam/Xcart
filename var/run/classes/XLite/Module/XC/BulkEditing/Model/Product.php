@@ -11,7 +11,7 @@ namespace XLite\Module\XC\BulkEditing\Model;
 /**
  * The Product model repository
  */
- class Product extends \XLite\Module\XC\CustomProductTabs\Model\Product implements \XLite\Base\IDecorator
+ class Product extends \XLite\Module\XC\FreeShipping\Model\Product implements \XLite\Base\IDecorator
 {
     /**
      * Flag to exporting entities (no need setters and getters)

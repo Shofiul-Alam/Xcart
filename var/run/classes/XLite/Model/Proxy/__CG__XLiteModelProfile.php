@@ -94,10 +94,10 @@ class Profile extends \XLite\Model\Profile implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', 'socialLoginProvider', 'socialLoginId', 'gaClientId', 'pictureUrl', 'default_card_id', 'pending_zero_auth', 'pending_zero_auth_txn_id', 'pending_zero_auth_status', 'pending_zero_auth_interface', 'mail_chimp_lists', 'mail_chimp_interests', 'mail_chimp_segments', 'profile_id', 'login', 'password', 'password_hint', 'password_hint_answer', 'passwordResetKey', 'passwordResetKeyDate', 'access_level', 'cms_profile_id', 'cms_name', 'added', 'first_login', 'last_login', 'status', 'statusComment', 'referer', 'order', 'event', 'language', 'last_shipping_id', 'last_payment_id', 'membership', 'pending_membership', 'addresses', 'roles', 'orders_count', 'anonymous', 'forceChangePassword', 'dateOfLoginAttempt', 'countOfLoginAttempts', 'searchFakeField', 'xcPendingExport', '_previous_state');
+            return array('__isInitialized__', 'socialLoginProvider', 'socialLoginId', 'gaClientId', 'pictureUrl', 'default_card_id', 'pending_zero_auth', 'pending_zero_auth_txn_id', 'pending_zero_auth_status', 'pending_zero_auth_interface', 'mail_chimp_lists', 'mail_chimp_interests', 'mail_chimp_segments', 'vendorImage', 'vendor', 'cleanURLs', 'shippingMethods', 'vendorConfig', 'paypalLogin', 'firstName', 'lastName', 'paypalLoginStatus', 'bankDetails', 'profileTransactions', 'lastShippingIdByVendor', 'specialRevshareFeeDst', 'hasSpecialRevshareFeeDst', 'specialRevshareFeeShipping', 'hasSpecialRevshareFeeShipping', 'profile_id', 'login', 'password', 'password_hint', 'password_hint_answer', 'passwordResetKey', 'passwordResetKeyDate', 'access_level', 'cms_profile_id', 'cms_name', 'added', 'first_login', 'last_login', 'status', 'statusComment', 'referer', 'order', 'event', 'language', 'last_shipping_id', 'last_payment_id', 'membership', 'pending_membership', 'addresses', 'roles', 'orders_count', 'anonymous', 'forceChangePassword', 'dateOfLoginAttempt', 'countOfLoginAttempts', 'searchFakeField', 'xcPendingExport', '_previous_state');
         }
 
-        return array('__isInitialized__', 'socialLoginProvider', 'socialLoginId', 'gaClientId', 'pictureUrl', 'default_card_id', 'pending_zero_auth', 'pending_zero_auth_txn_id', 'pending_zero_auth_status', 'pending_zero_auth_interface', 'mail_chimp_lists', 'mail_chimp_interests', 'mail_chimp_segments', 'profile_id', 'login', 'password', 'password_hint', 'password_hint_answer', 'passwordResetKey', 'passwordResetKeyDate', 'access_level', 'cms_profile_id', 'cms_name', 'added', 'first_login', 'last_login', 'status', 'statusComment', 'referer', 'order', 'event', 'language', 'last_shipping_id', 'last_payment_id', 'membership', 'pending_membership', 'addresses', 'roles', 'orders_count', 'anonymous', 'forceChangePassword', 'dateOfLoginAttempt', 'countOfLoginAttempts', 'searchFakeField', 'xcPendingExport', '_previous_state');
+        return array('__isInitialized__', 'socialLoginProvider', 'socialLoginId', 'gaClientId', 'pictureUrl', 'default_card_id', 'pending_zero_auth', 'pending_zero_auth_txn_id', 'pending_zero_auth_status', 'pending_zero_auth_interface', 'mail_chimp_lists', 'mail_chimp_interests', 'mail_chimp_segments', 'vendorImage', 'vendor', 'cleanURLs', 'shippingMethods', 'vendorConfig', 'paypalLogin', 'firstName', 'lastName', 'paypalLoginStatus', 'bankDetails', 'profileTransactions', 'lastShippingIdByVendor', 'specialRevshareFeeDst', 'hasSpecialRevshareFeeDst', 'specialRevshareFeeShipping', 'hasSpecialRevshareFeeShipping', 'profile_id', 'login', 'password', 'password_hint', 'password_hint_answer', 'passwordResetKey', 'passwordResetKeyDate', 'access_level', 'cms_profile_id', 'cms_name', 'added', 'first_login', 'last_login', 'status', 'statusComment', 'referer', 'order', 'event', 'language', 'last_shipping_id', 'last_payment_id', 'membership', 'pending_membership', 'addresses', 'roles', 'orders_count', 'anonymous', 'forceChangePassword', 'dateOfLoginAttempt', 'countOfLoginAttempts', 'searchFakeField', 'xcPendingExport', '_previous_state');
     }
 
     /**
@@ -613,6 +613,589 @@ class Profile extends \XLite\Model\Profile implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
+    public function setPaypalLogin($paypalLogin)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPaypalLogin', array($paypalLogin));
+
+        return parent::setPaypalLogin($paypalLogin);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setFirstName($value)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setFirstName', array($value));
+
+        return parent::setFirstName($value);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setLastName($value)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLastName', array($value));
+
+        return parent::setLastName($value);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function renewPaypalLoginStatus()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'renewPaypalLoginStatus', array());
+
+        return parent::renewPaypalLoginStatus();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getRevshareFeeDst()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getRevshareFeeDst', array());
+
+        return parent::getRevshareFeeDst();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getRevshareFeeShipping()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getRevshareFeeShipping', array());
+
+        return parent::getRevshareFeeShipping();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getVendor()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVendor', array());
+
+        return parent::getVendor();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function isVendor()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isVendor', array());
+
+        return parent::isVendor();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getVendorCompanyName()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVendorCompanyName', array());
+
+        return parent::getVendorCompanyName();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setVendorCompanyName($value)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVendorCompanyName', array($value));
+
+        return parent::setVendorCompanyName($value);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getVendorLocation()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVendorLocation', array());
+
+        return parent::getVendorLocation();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setVendorLocation($value)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVendorLocation', array($value));
+
+        return parent::setVendorLocation($value);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getVendorDescription()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVendorDescription', array());
+
+        return parent::getVendorDescription();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setVendorDescription($value)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVendorDescription', array($value));
+
+        return parent::setVendorDescription($value);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getVendorProducts(\XLite\Core\CommonCell $cnd = NULL, $countOnly = false)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVendorProducts', array($cnd, $countOnly));
+
+        return parent::getVendorProducts($cnd, $countOnly);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function addShippingMethod($method)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addShippingMethod', array($method));
+
+        return parent::addShippingMethod($method);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function removeShippingMethod($method)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeShippingMethod', array($method));
+
+        return parent::removeShippingMethod($method);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function updateBellNotification()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'updateBellNotification', array());
+
+        return parent::updateBellNotification();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function generateCleanURL()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'generateCleanURL', array());
+
+        return parent::generateCleanURL();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function prepareBeforeSave()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'prepareBeforeSave', array());
+
+        return parent::prepareBeforeSave();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getFirstName()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getFirstName', array());
+
+        return parent::getFirstName();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getLastName()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLastName', array());
+
+        return parent::getLastName();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function isVerifiedPaypalLogin()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isVerifiedPaypalLogin', array());
+
+        return parent::isVerifiedPaypalLogin();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setCleanURLs($cleanURLs)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCleanURLs', array($cleanURLs));
+
+        return parent::setCleanURLs($cleanURLs);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setCleanURL($cleanURL, $force = false)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCleanURL', array($cleanURL, $force));
+
+        return parent::setCleanURL($cleanURL, $force);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getCleanURL()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCleanURL', array());
+
+        return parent::getCleanURL();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setVendorConfig($vendorConfig)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVendorConfig', array($vendorConfig));
+
+        return parent::setVendorConfig($vendorConfig);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getVendorConfig()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVendorConfig', array());
+
+        return parent::getVendorConfig();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getPaypalLogin()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPaypalLogin', array());
+
+        return parent::getPaypalLogin();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setPaypalLoginStatus($paypalLoginStatus)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPaypalLoginStatus', array($paypalLoginStatus));
+
+        return parent::setPaypalLoginStatus($paypalLoginStatus);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getPaypalLoginStatus()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPaypalLoginStatus', array());
+
+        return parent::getPaypalLoginStatus();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setBankDetails($bankDetails)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setBankDetails', array($bankDetails));
+
+        return parent::setBankDetails($bankDetails);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getBankDetails()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getBankDetails', array());
+
+        return parent::getBankDetails();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setLastShippingIdByVendor($lastShippingIdByVendor)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLastShippingIdByVendor', array($lastShippingIdByVendor));
+
+        return parent::setLastShippingIdByVendor($lastShippingIdByVendor);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getLastShippingIdByVendor()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLastShippingIdByVendor', array());
+
+        return parent::getLastShippingIdByVendor();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setVendorImage(\XLite\Module\XC\MultiVendor\Model\Image\Vendor $vendorImage = NULL)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVendorImage', array($vendorImage));
+
+        return parent::setVendorImage($vendorImage);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getVendorImage()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVendorImage', array());
+
+        return parent::getVendorImage();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setVendor(\XLite\Module\XC\MultiVendor\Model\Vendor $vendor = NULL)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVendor', array($vendor));
+
+        return parent::setVendor($vendor);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function addCleanURLs(\XLite\Model\CleanURL $cleanURLs)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addCleanURLs', array($cleanURLs));
+
+        return parent::addCleanURLs($cleanURLs);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getCleanURLs()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCleanURLs', array());
+
+        return parent::getCleanURLs();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function addShippingMethods(\XLite\Model\Shipping\Method $shippingMethods)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addShippingMethods', array($shippingMethods));
+
+        return parent::addShippingMethods($shippingMethods);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getShippingMethods()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getShippingMethods', array());
+
+        return parent::getShippingMethods();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function addProfileTransactions(\XLite\Module\XC\MultiVendor\Model\ProfileTransaction $profileTransactions)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addProfileTransactions', array($profileTransactions));
+
+        return parent::addProfileTransactions($profileTransactions);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getProfileTransactions()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getProfileTransactions', array());
+
+        return parent::getProfileTransactions();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setSpecialRevshareFeeDst($specialRevshareFeeDst)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setSpecialRevshareFeeDst', array($specialRevshareFeeDst));
+
+        return parent::setSpecialRevshareFeeDst($specialRevshareFeeDst);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getSpecialRevshareFeeDst()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getSpecialRevshareFeeDst', array());
+
+        return parent::getSpecialRevshareFeeDst();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setHasSpecialRevshareFeeDst($hasSpecialRevshareFeeDst)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setHasSpecialRevshareFeeDst', array($hasSpecialRevshareFeeDst));
+
+        return parent::setHasSpecialRevshareFeeDst($hasSpecialRevshareFeeDst);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getHasSpecialRevshareFeeDst()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getHasSpecialRevshareFeeDst', array());
+
+        return parent::getHasSpecialRevshareFeeDst();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setSpecialRevshareFeeShipping($specialRevshareFeeShipping)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setSpecialRevshareFeeShipping', array($specialRevshareFeeShipping));
+
+        return parent::setSpecialRevshareFeeShipping($specialRevshareFeeShipping);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getSpecialRevshareFeeShipping()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getSpecialRevshareFeeShipping', array());
+
+        return parent::getSpecialRevshareFeeShipping();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setHasSpecialRevshareFeeShipping($hasSpecialRevshareFeeShipping)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setHasSpecialRevshareFeeShipping', array($hasSpecialRevshareFeeShipping));
+
+        return parent::setHasSpecialRevshareFeeShipping($hasSpecialRevshareFeeShipping);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getHasSpecialRevshareFeeShipping()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getHasSpecialRevshareFeeShipping', array());
+
+        return parent::getHasSpecialRevshareFeeShipping();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function updateSearchFakeField()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'updateSearchFakeField', array());
+
+        return parent::updateSearchFakeField();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function setReferer($value)
     {
 
@@ -927,17 +1510,6 @@ class Profile extends \XLite\Model\Profile implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'prepareBeforeUpdate', array());
 
         return parent::prepareBeforeUpdate();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function updateSearchFakeField()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'updateSearchFakeField', array());
-
-        return parent::updateSearchFakeField();
     }
 
     /**

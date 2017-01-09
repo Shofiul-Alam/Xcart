@@ -1,0 +1,7 @@
+{##
+ # Vendor filter widget
+ #}
+
+<div class="filter type-vendor clearfix">
+    {{ widget('XLite\\Module\\XC\\MultiVendor\\View\\FormField\\Select\\VendorFilter', fieldName='filter[' ~ this.getFilterType() ~ ']', label='Vendor', value=this.getValue()) }}
+</div>

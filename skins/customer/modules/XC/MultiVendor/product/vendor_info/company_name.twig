@@ -1,0 +1,14 @@
+{##
+ # Vendor company name
+ #
+ # @ListChild (list="product.vendor_info", weight="20")
+ # @ListChild (list="sidebar.first.vendor_info", weight="20")
+ #}
+
+<div class="vendor-company-name">
+    {% if this.vendor.getVendorCompanyName() %}
+        <span>{{ this.vendor.getVendorCompanyName() }}</span>
+    {% else %}
+        <span>{{ this.getVendorCompanyNameStub() }}</span>
+    {% endif %}
+</div>

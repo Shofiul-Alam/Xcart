@@ -11,7 +11,7 @@ namespace XLite\Module\XC\MailChimp\View\Model;
 /**
  * Class represents an order
  */
-abstract class Product extends \XLite\Module\XC\ProductFilter\View\Model\Product implements \XLite\Base\IDecorator
+abstract class Product extends \XLite\Module\XC\MultiVendor\View\Model\Product implements \XLite\Base\IDecorator
 {
     /**
      * Save current form reference and sections list, and initialize the cache

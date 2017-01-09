@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\SimpleCMS\Model\Repo;
 /**
  * Clean URL repository
  */
- class CleanURL extends \XLite\Module\XC\News\Model\Repo\CleanURL implements \XLite\Base\IDecorator
+ class CleanURL extends \XLite\Module\XC\MultiVendor\Model\Repo\CleanURL implements \XLite\Base\IDecorator
 {
     /**
      * Returns available entities types

@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\XPaymentsConnector\View\Menu\Admin;
 /**
  * Menu 
  */
-abstract class AAdmin extends \XLite\Module\XC\Upselling\View\Menu\AAdmin implements \XLite\Base\IDecorator
+abstract class AAdmin extends \XLite\Module\XC\MultiVendor\View\Menu\Admin\AAdmin implements \XLite\Base\IDecorator
 {
     /**
      * Returns the list of related targets

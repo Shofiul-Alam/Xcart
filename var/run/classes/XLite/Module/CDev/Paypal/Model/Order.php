@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\Paypal\Model;
 /**
  * Order model
  */
- class Order extends \XLite\Module\CDev\XPaymentsConnector\Model\Order implements \XLite\Base\IDecorator
+ class Order extends \XLite\Model\OrderAbstract implements \XLite\Base\IDecorator
 {
     /**
      * Exclude Express Checkout from the list of available for checkout payment methods

@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\Paypal\View\Model\Profile;
 /**
  * \XLite\View\Model\Profile\Main
  */
- class Main extends \XLite\Module\XC\CrispWhiteSkin\View\Model\Profile\Main implements \XLite\Base\IDecorator
+ class Main extends \XLite\Module\Shofi\AdvanceRegistration\View\Model\Profile\Main implements \XLite\Base\IDecorator
 {
     /**
      * Return fields list by the corresponding schema

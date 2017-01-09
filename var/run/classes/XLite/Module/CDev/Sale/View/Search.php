@@ -11,7 +11,7 @@ namespace XLite\Module\CDev\Sale\View;
 /**
  * Search
  */
- class Search extends \XLite\View\ItemsList\Model\Product\Admin\SearchAbstract implements \XLite\Base\IDecorator
+ class Search extends \XLite\Module\XC\MultiVendor\View\ItemsList\Model\Product\Admin\Search implements \XLite\Base\IDecorator
 {
     /**
      * Register JS files
