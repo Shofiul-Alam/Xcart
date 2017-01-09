@@ -180,11 +180,11 @@ XC\MultiVendor:
   tables: [commission, vendor_images, profile_transaction, vendor, vendor_translations]
   columns: { attributes: { vendor_id: 'vendor_id INT DEFAULT NULL' }, attribute_groups: { vendor_id: 'vendor_id INT DEFAULT NULL' }, clean_urls: { vendor_id: 'vendor_id INT DEFAULT NULL' }, config: { vendor_id: 'vendor_id INT DEFAULT NULL' }, order_surcharges: { vendor_id: 'vendor_id INT DEFAULT NULL' }, orders: { parent_id: 'parent_id INT DEFAULT NULL', vendor_id: 'vendor_id INT DEFAULT NULL', commission_id: 'commission_id INT UNSIGNED DEFAULT NULL' }, order_items: { vendor_id: 'vendor_id INT DEFAULT NULL', originalProductId: 'originalProductId INT UNSIGNED DEFAULT NULL' }, order_tracking_number: { vendor_id: 'vendor_id INT DEFAULT NULL' }, products: { vendor_id: 'vendor_id INT DEFAULT NULL' }, product_classes: { vendor_id: 'vendor_id INT DEFAULT NULL' }, profiles: { vendorConfig: 'vendorConfig LONGTEXT DEFAULT NULL COMMENT ''(DC2Type:array)''', paypalLogin: 'paypalLogin VARCHAR(255) DEFAULT NULL', firstName: 'firstName VARCHAR(255) DEFAULT NULL', lastName: 'lastName VARCHAR(255) DEFAULT NULL', paypalLoginStatus: 'paypalLoginStatus CHAR(1) NOT NULL', bankDetails: 'bankDetails LONGTEXT DEFAULT NULL', lastShippingIdByVendor: 'lastShippingIdByVendor LONGTEXT DEFAULT NULL COMMENT ''(DC2Type:array)''', specialRevshareFeeDst: 'specialRevshareFeeDst NUMERIC(14, 4) DEFAULT NULL', hasSpecialRevshareFeeDst: 'hasSpecialRevshareFeeDst TINYINT(1) NOT NULL', specialRevshareFeeShipping: 'specialRevshareFeeShipping NUMERIC(14, 4) DEFAULT NULL', hasSpecialRevshareFeeShipping: 'hasSpecialRevshareFeeShipping TINYINT(1) NOT NULL' }, shipping_methods: { vendor_id: 'vendor_id INT DEFAULT NULL' }, coupons: { vendor_id: 'vendor_id INT DEFAULT NULL' }, volume_discounts: { vendor_id: 'vendor_id INT DEFAULT NULL' } }
   dependencies: {  }
-Shofi\AdvanceRegistration:
-  tables: {  }
-  columns: {  }
-  dependencies: {  }
 Shofi\ToolListing:
   tables: [product_aprice, product_location, product_extra_details]
+  columns: {  }
+  dependencies: {  }
+Shofi\AdvanceRegistration:
+  tables: {  }
   columns: {  }
   dependencies: {  }

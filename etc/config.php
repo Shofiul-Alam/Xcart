@@ -171,14 +171,14 @@ image_magick_path =
 ; Installation authcode is created authomatically and stored in this section.
 ;
 [installer_details]
-auth_code = "4D257WNY"
-shared_secret_key = "587304eb47c010.86660393"
+auth_code = "WIO9RJNX"
+shared_secret_key = "58740624db1b68.49000990"
 
 ;
 ; Some options to optimize the store
 ;
 [performance]
-developer_mode = Off
+developer_mode = On
 cache_namespace_hash = On
 skins_cache = off
 
@@ -235,6 +235,7 @@ vhost    = "/"
 exchange = "xlite"
 
 ;
+; HTML Purifier options
 ; HTML Purifier options
 ; See http://htmlpurifier.org/live/configdoc/plain.html for more details on HTML Purifier options
 ;
